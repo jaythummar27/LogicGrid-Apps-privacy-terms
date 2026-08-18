@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Recover Deleted Messages</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+
+        /* ── Header ─────────────────────────────────── */
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, var(--sky) 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(59,130,246,.25) 0%, transparent 60%),
+                        radial-gradient(ellipse at 20% 80%, rgba(14,165,233,.18) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon {
+            font-size: 52px;
+            display: block;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,.25));
+        }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type {
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: .75;
+            margin-bottom: 20px;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .badge {
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: .78rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        /* ── Layout ─────────────────────────────────── */
+        .page-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ── Nav strip ──────────────────────────────── */
+        .toc-strip {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 20px 24px;
+            margin: -28px 0 32px;
+            position: relative;
+            z-index: 2;
+        }
+        .toc-strip p {
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .toc-links a {
+            font-size: .82rem;
+            color: var(--accent);
+            text-decoration: none;
+            background: var(--surface);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-weight: 500;
+            transition: background .15s, color .15s;
+        }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        /* ── Section Cards ──────────────────────────── */
+        .section {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+            scroll-margin-top: 24px;
+        }
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1.5px solid var(--surface);
+        }
+        .section-icon {
+            width: 42px; height: 42px;
+            border-radius: 11px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+        .icon-indigo { background: #E0E7FF; }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -.3px;
+        }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num {
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 1px;
+        }
+
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+
+        strong { font-weight: 600; color: var(--ink); }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface);
+            border-radius: 4px;
+            padding: 1px 6px;
+            font-size: .85em;
+            color: var(--accent);
+            border: 1px solid var(--border);
+        }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Callout boxes ──────────────────────────── */
+        .callout {
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: .93rem;
+            line-height: 1.65;
+        }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+
+        /* ── Tables ─────────────────────────────────── */
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+        thead tr { background: var(--surface); }
+        th {
+            text-align: left;
+            padding: 11px 14px;
+            font-weight: 600;
+            color: var(--ink);
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            border-bottom: 1px solid var(--border);
+        }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+        .tick { color: var(--green); font-weight: 700; }
+        .cross { color: var(--red); font-weight: 700; }
+
+        /* ── Pill list ──────────────────────────────── */
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+        .pill {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--ink);
+        }
+        .pill-green { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+        .pill-red   { background: #FEE2E2; border-color: #FCA5A5; color: #991B1B; }
+        .pill-blue  { background: #DBEAFE; border-color: #93C5FD; color: #1D4ED8; }
+
+        /* ── Divider ────────────────────────────────── */
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+
+        /* ── Footer ─────────────────────────────────── */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,.65);
+            text-align: center;
+            padding: 28px 20px;
+            font-size: .85rem;
+            line-height: 1.8;
+        }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">🔐</span>
+    <h1>Recover Deleted Messages</h1>
+    <div class="doc-type">Privacy Policy</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: August 15, 2026</span>
+        <span class="badge">📋 Effective: August 15, 2026</span>
+        <span class="badge">🌐 GDPR-Aware</span>
+        <span class="badge">✅ Google Play Compliant</span>
+        <span class="badge">📱 AdMob Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#intro">Introduction</a>
+            <a href="#collect">Data We Collect</a>
+            <a href="#notif">Notification Access</a>
+            <a href="#media">Photos &amp; Videos</a>
+            <a href="#storage-clean">Storage &amp; Cleaner</a>
+            <a href="#contacts">Contacts</a>
+            <a href="#ads">Advertising (AdMob)</a>
+            <a href="#subs">Subscriptions</a>
+            <a href="#thirdparty">Third-Party Services</a>
+            <a href="#storage">Storage &amp; Security</a>
+            <a href="#rights">Your Rights</a>
+            <a href="#permissions">Permissions</a>
+            <a href="#children">Children</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- ── 1. Introduction ───────────────────────────────────────── -->
+    <div class="section" id="intro">
+        <div class="section-head">
+            <div class="section-icon icon-blue">📖</div>
+            <div><h2>Introduction</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>Welcome to <strong>Recover Deleted Messages</strong> (the "App"), developed by <strong>Varshaben Mukeshbhai Thummar</strong> ("we," "us," "our"), based in Gujarat, India. The App is a personal utility for Android that saves the content of notifications so you can still read a message after the sender deletes it, and that finds and removes duplicate photos, videos and files to free up storage.</p>
+        <p>This Privacy Policy describes exactly what information the App reads, why, and where it goes. <strong>Please read it carefully before using the App.</strong></p>
+        <div class="callout callout-blue">
+            By downloading, installing, or using the App, you acknowledge that you have read and agree to this Privacy Policy. If you do not agree, please uninstall and do not use the App.
+        </div>
+        <p>This policy covers every feature of the App: notification-based message capture, deletion detection, media saving, duplicate photo/video/file scanning, storage analysis, optional contact de-duplication, and advertising served through Google AdMob.</p>
+    </div>
+
+    <!-- ── 2. Data We Collect ─────────────────────────────────────── -->
+    <div class="section" id="collect">
+        <div class="section-head">
+            <div class="section-icon icon-teal">📊</div>
+            <div><h2>Information We Collect</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>We collect information in two ways: data the App reads from your device to power its features, and data collected by the third-party SDKs it includes (detailed in Section 9).</p>
+
+        <h3>2.1 Data Read From Your Device</h3>
+        <ul>
+            <li><strong>Notification content</strong> (if you grant notification access and select an app): message text, sender name, conversation name, group flag, timestamp, source app — see Section 3</li>
+            <li><strong>Photos and videos</strong> (if you grant media access): file names, sizes, dates, dimensions, and file content used only to compute local duplicate-detection hashes — see Section 4</li>
+            <li><strong>Contacts</strong> (only if you open the duplicate-contacts feature) — see Section 6</li>
+        </ul>
+        <p>All of this is stored <strong>exclusively on your device</strong>, in the App's private storage (Android Room/SQLite database and private files). We do not operate a server and none of it is transmitted to us.</p>
+
+        <h3>2.2 Data NOT Collected by Us</h3>
+        <div class="callout callout-green">
+            <strong>We do not collect, store, or process on our own servers:</strong> your name, email address, phone number, bank details, passwords, one-time codes, or any account identifier — because the App has no account system and no server. There is no Firebase, no Analytics SDK and no Crash-reporting SDK in this App.
+        </div>
+    </div>
+
+    <!-- ── 3. Notification Access ─────────────────────────────────── -->
+    <div class="section" id="notif">
+        <div class="section-head">
+            <div class="section-icon icon-amber">🔔</div>
+            <div><h2>Notification Access &amp; Message Data</h2><div class="section-num">Section 03</div></div>
+        </div>
+
+        <div class="callout callout-amber">
+            <strong>Google Play Sensitive Permission:</strong> This App uses Android's Notification Listener capability, classified as a sensitive permission under Google Play policy. The following disclosure is provided in full transparency and compliance with that policy.
+        </div>
+
+        <h3>Why We Request It</h3>
+        <p>This is the App's core feature. When a messaging app you have chosen posts a notification, the App reads its content and saves a copy in a local database on your device, so that if the sender later deletes that message, your saved copy remains readable. A disclosure explaining this is shown <strong>before</strong> the Android system permission screen ever appears.</p>
+
+        <h3>What We Read</h3>
+        <div class="pill-list">
+            <span class="pill pill-green">Message text</span>
+            <span class="pill pill-green">Sender name &amp; conversation name</span>
+            <span class="pill pill-green">Timestamp &amp; group-chat flag</span>
+            <span class="pill pill-green">Notification avatar / attached image (only if media saving is on)</span>
+        </div>
+
+        <h3>What We NEVER Read</h3>
+        <div class="pill-list">
+            <span class="pill pill-red">Notifications from apps you have not selected</span>
+            <span class="pill pill-red">Any app's private storage or database</span>
+            <span class="pill pill-red">Anything on WhatsApp's or any provider's servers</span>
+            <span class="pill pill-red">Group summaries ("3 new messages") or progress notifications</span>
+        </div>
+
+        <h3>How It Is Processed</h3>
+        <ul>
+            <li>Only the apps you explicitly select in Settings are ever read. Everything else is ignored and discarded.</li>
+            <li>Parsing happens <strong>100% on-device</strong>. The saved content is stored in a local database.</li>
+            <li>Captured content is <strong>never transmitted</strong> to any server — no code path in the App reads the message database and sends it anywhere.</li>
+        </ul>
+
+        <h3>This Permission Is Optional</h3>
+        <p>Notification access is optional and can be revoked at any time from Android Settings → Notification access. Without it, message capture simply does not run; the duplicate-photo and storage-cleaner features work independently of it.</p>
+    </div>
+
+    <!-- ── 4. Photos & Videos ─────────────────────────────────────── -->
+    <div class="section" id="media">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🖼️</div>
+            <div><h2>Photos, Videos &amp; Media</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <p>The App requests photo and video access so its duplicate-finder, storage-cleaner and storage-analyser features can scan your media library through Android's MediaStore, and through folders you pick yourself with Android's folder picker.</p>
+
+        <div class="callout callout-green">
+            <strong>Key privacy facts about media access:</strong><br>
+            • Duplicate detection is done by computing a <strong>SHA-256 content hash</strong> entirely on your device — files are never uploaded<br>
+            • Media attached to a notification is saved only when the notification genuinely carries it; otherwise the App records it as "media, not saved" rather than pretending to have a copy<br>
+            • A file is only copied into the App's own storage when you explicitly choose to save that item<br>
+            • The App does <strong>not</strong> request "All files access" (<code>MANAGE_EXTERNAL_STORAGE</code>) and cannot browse your whole filesystem
+        </div>
+        <p>Media access is optional. Message capture works without it; only the duplicate-finder and cleaner features need it.</p>
+    </div>
+
+    <!-- ── 5. Storage & Cleaner ───────────────────────────────────── -->
+    <div class="section" id="storage-clean">
+        <div class="section-head">
+            <div class="section-icon icon-green">🧹</div>
+            <div><h2>Device Storage &amp; Cleaner Features</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>The cleanup screens (large files, screenshots, old downloads, empty files, duplicate photos/videos/files) build suggestions from the media index described in Section 4. These are suggestions only — <strong>nothing is deleted automatically.</strong> You must select items and confirm, and on Android 11 and above the Android system itself shows an additional confirmation dialog before anything is removed or trashed.</p>
+    </div>
+
+    <!-- ── 6. Contacts ─────────────────────────────────────────────── -->
+    <div class="section" id="contacts">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">👥</div>
+            <div><h2>Contacts (Optional Feature)</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>If — and only if — you open the duplicate-contacts screen, the App asks to read your contacts to compare entries and show likely duplicates, and to write contacts so you can merge or remove the ones you choose. Contact data is processed on-device and is <strong>never uploaded</strong>. Declining this permission disables only that one feature.</p>
+    </div>
+
+    <!-- ── 7. Ads ──────────────────────────────────────────────────── -->
+    <div class="section" id="ads">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising — Google AdMob</h2><div class="section-num">Section 07</div></div>
+        </div>
+
+        <div class="callout callout-amber">
+            <strong>AdMob Disclosure:</strong> This App uses Google AdMob to display advertisements. AdMob may collect and use data from your device to serve personalized or non-personalized ads. This section explains how advertising works in the App.
+        </div>
+
+        <h3>Ad Formats Used</h3>
+        <p>Banner ads on the main screens, native ads on a small number of screens, and interstitial (full-screen) ads shown only at natural transition points, paced so they cannot appear more than once every 45 seconds.</p>
+
+        <h3>Data Collected by AdMob</h3>
+        <p>Google AdMob independently collects the following data for ad serving and measurement purposes:</p>
+        <ul>
+            <li>Advertising identifier (Google Advertising ID / GAID)</li>
+            <li>Device information (model, OS version, screen size, language)</li>
+            <li>IP address (used to infer approximate geographic location)</li>
+            <li>App interaction signals (ad impressions, clicks)</li>
+        </ul>
+        <p>This data is collected and processed by Google LLC under its own privacy policy. We do not have access to or control over AdMob's data collection, and ad requests never contain your messages, photos, videos, files or contacts.</p>
+
+        <h3>Ad Personalization</h3>
+        <p>By default, AdMob may serve <strong>personalized ads</strong> based on your interests and prior app activity. You can opt out at any time:</p>
+        <ul>
+            <li>On your Android device: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong></li>
+            <li>Or reset your Advertising ID: <strong>Settings → Google → Ads → Reset Advertising ID</strong></li>
+            <li>For EU/EEA/UK users: the App implements Google's User Messaging Platform (UMP) for consent, and a "Ad privacy choices" option appears in Settings where consent applies</li>
+        </ul>
+        <p>Purchasing the ad-free subscription (Section 8) stops all ad requests. Ads are never shown during a permission request or while a scan or deletion is in progress.</p>
+
+        <div class="divider"></div>
+        <p>For Google's data practices related to advertising, see: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Privacy FAQ</a>.</p>
+    </div>
+
+    <!-- ── 8. Subscriptions ───────────────────────────────────────── -->
+    <div class="section" id="subs">
+        <div class="section-head">
+            <div class="section-icon icon-blue">💳</div>
+            <div><h2>Subscriptions &amp; Billing</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App offers an optional subscription whose only benefit is removing ads. Purchases are processed by <strong>Google Play Billing</strong>, with entitlements managed through <strong>RevenueCat</strong>. We never see or handle your card details — Google processes payment directly.</p>
+        <p>RevenueCat receives your purchase and subscription status, and an anonymous app-user identifier, in order to keep the ad-free entitlement working across your devices. It does not receive your messages, photos, videos, files or contacts.</p>
+    </div>
+
+    <!-- ── 9. Third-Party Services ─────────────────────────────────── -->
+    <div class="section" id="thirdparty">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔗</div>
+            <div><h2>Third-Party SDKs &amp; Services</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>The App integrates only the following third-party SDKs — and no others. Each operates under its own privacy policy.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SDK / Service</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Data Sent?</th>
+                        <th>Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Google LLC</td>
+                        <td>Banner, native &amp; interstitial ads</td>
+                        <td><span class="tick">✔ Advertising ID, device info</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google User Messaging Platform</strong></td>
+                        <td>Google LLC</td>
+                        <td>GDPR / consent management for ads</td>
+                        <td><span class="tick">✔ Consent choice</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play Billing</strong></td>
+                        <td>Google LLC</td>
+                        <td>Subscription payment processing</td>
+                        <td><span class="tick">✔ Purchase status only</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RevenueCat</strong></td>
+                        <td>RevenueCat, Inc.</td>
+                        <td>Subscription entitlement management</td>
+                        <td><span class="tick">✔ Purchase status, anonymous ID</span></td>
+                        <td><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="callout callout-green">
+            <strong>Not used in this App:</strong> Firebase, Google Analytics, Crashlytics, Facebook/Meta SDK, or any other analytics, attribution or crash-reporting SDK. If this ever changes, this policy and the App's Play Store Data Safety section will be updated first.
+        </div>
+    </div>
+
+    <!-- ── 10. Storage & Security ─────────────────────────────────── -->
+    <div class="section" id="storage">
+        <div class="section-head">
+            <div class="section-icon icon-green">🔒</div>
+            <div><h2>Data Storage &amp; Security</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Data Type</th><th>Where Stored</th><th>Sent to Our Servers?</th><th>Retention</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Captured messages &amp; conversations</td><td>Device (Room/SQLite, private storage)</td><td><span class="cross">✘ Never</span></td><td>Until deleted by you, or per your retention setting (default: forever)</td></tr>
+                    <tr><td>Saved media &amp; thumbnails</td><td>Device (private app storage)</td><td><span class="cross">✘ Never</span></td><td>Until deleted by you or automatic retention applies</td></tr>
+                    <tr><td>Media index (for duplicate scan)</td><td>Device (Room/SQLite)</td><td><span class="cross">✘ Never</span></td><td>Until you clear it</td></tr>
+                    <tr><td>Contacts (if feature used)</td><td>Read in place, not copied</td><td><span class="cross">✘ Never</span></td><td>Not retained by the App</td></tr>
+                    <tr><td>App settings</td><td>Local preferences only</td><td><span class="cross">✘ Never</span></td><td>Until you uninstall</td></tr>
+                    <tr><td>Advertising identifiers &amp; ad interactions</td><td>AdMob servers</td><td><span class="tick">✔ To Google only</span></td><td>Per Google's policy</td></tr>
+                    <tr><td>Purchase &amp; subscription status</td><td>Google Play / RevenueCat servers</td><td><span class="tick">✔ To Google / RevenueCat only</span></td><td>Per their policies</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Our Security Measures</h3>
+        <ul>
+            <li>Captured content lives in the App's private sandbox, which Android prevents other apps from reading</li>
+            <li>Android's automatic backup of the App's data is disabled, so captured content is not copied into a cloud backup by the App</li>
+            <li>Deletion alerts deliberately omit message text so nothing sensitive appears on your lock screen</li>
+            <li>We do not operate any backend server that stores your personal or message data</li>
+        </ul>
+    </div>
+
+    <!-- ── 11. Your Rights ─────────────────────────────────────────── -->
+    <div class="section" id="rights">
+        <div class="section-head">
+            <div class="section-icon icon-blue">⚖️</div>
+            <div><h2>Your Rights &amp; Controls</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p>You have full control over your data:</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Right</th><th>How to Exercise It</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Access your data</strong></td><td>All your data is stored locally — open the App to view it</td></tr>
+                    <tr><td><strong>Export your data</strong></td><td>Export your message history to a file you control</td></tr>
+                    <tr><td><strong>Delete one item or all data</strong></td><td>Delete any message/conversation, or Settings → clear saved data</td></tr>
+                    <tr><td><strong>Revoke notification access</strong></td><td>Android Settings → Notification access → turn the App off</td></tr>
+                    <tr><td><strong>Revoke media/contacts permission</strong></td><td>Android Settings → Apps → Recover Deleted Messages → Permissions</td></tr>
+                    <tr><td><strong>Opt out of ad personalization</strong></td><td>Android Settings → Google → Ads → Opt out of Ads Personalization</td></tr>
+                    <tr><td><strong>Reset advertising ID</strong></td><td>Android Settings → Google → Ads → Reset Advertising ID</td></tr>
+                    <tr><td><strong>Set a retention window</strong></td><td>Settings → Retention (7 / 30 / 90 days, or keep forever)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>For GDPR (EU/EEA), UK, or other applicable data-subject-rights requests, contact us at the email below. We aim to respond within 30 days.</p>
+    </div>
+
+    <!-- ── 12. Permissions ─────────────────────────────────────────── -->
+    <div class="section" id="permissions">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🔑</div>
+            <div><h2>Permissions Summary</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Permission</th><th>Purpose</th><th>Optional?</th><th>Data Leaves Device?</th></tr></thead>
+                <tbody>
+                    <tr><td>Notification access</td><td>Core feature — reads notifications from apps you select</td><td>Yes, but message recovery does not work without it</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Alert you when a saved message was deleted</td><td>Yes — messages still save without it</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>READ_MEDIA_IMAGES</code> / <code>READ_MEDIA_VIDEO</code></td><td>Duplicate scanning &amp; storage cleanup</td><td>Yes — only those features are affected</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>READ_MEDIA_VISUAL_USER_SELECTED</code></td><td>Android 14+ partial photo/video access</td><td>Yes</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>READ_CONTACTS</code> / <code>WRITE_CONTACTS</code></td><td>Duplicate contact detection &amp; merge</td><td>Yes — only that feature is affected</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td><td>Used only by AdMob and Play Billing</td><td>Core to ads/billing only</td><td><span class="tick">✔ Only to Google / RevenueCat</span></td></tr>
+                    <tr><td><code>AD_ID</code></td><td>Ad frequency capping &amp; measurement</td><td>Resettable in Android Settings</td><td><span class="tick">✔ To Google only</span></td></tr>
+                    <tr><td><code>BILLING</code></td><td>Purchasing the ad-free subscription</td><td>Only used if you subscribe</td><td><span class="tick">✔ To Google / RevenueCat only</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The App does <strong>not</strong> request All Files Access, location, camera, microphone, SMS, or call-log permissions.</p>
+    </div>
+
+    <!-- ── 13. Children ───────────────────────────────────────────── -->
+    <div class="section" id="children">
+        <div class="section-head">
+            <div class="section-icon icon-red">👶</div>
+            <div><h2>Children's Privacy</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>This App is intended for users aged <strong>13 and above</strong> (or the applicable minimum age in your jurisdiction), and its Google Play target audience is set to <strong>18 and over</strong> because it reads private message content. The App is not directed at, and we do not knowingly collect personal information from, children.</p>
+        <p>If you are a parent or guardian and believe a child has used this App, please contact us at <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a> and we will take steps to address it. Uninstalling the App removes all locally stored content.</p>
+    </div>
+
+    <!-- ── 14. Policy Changes ──────────────────────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔄</div>
+            <div><h2>Changes to This Policy</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>We may update this Privacy Policy when we add new features, integrate new SDKs, or when applicable laws change. We will update the "Last Updated" date at the top of this page and, for material changes, note them in the App's Play Store release notes before the affected version ships.</p>
+        <p>Continued use of the App after an updated policy takes effect constitutes your acceptance of the changes.</p>
+    </div>
+
+    <!-- ── 15. Contact ────────────────────────────────────────────── -->
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact Us</h2><div class="section-num">Section 15</div></div>
+        </div>
+        <p>For privacy-related questions, data deletion requests, permission concerns, or any other inquiries:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a></li>
+            <li><strong>Developer:</strong> Varshaben Mukeshbhai Thummar</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+        <div class="callout callout-blue">
+            We aim to respond to all privacy-related inquiries within <strong>30 business days</strong>.
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>Recover Deleted Messages</strong><br>
+    WhatsApp is a trademark of WhatsApp LLC. This App is independent and not affiliated with, endorsed by, or sponsored by WhatsApp LLC or Meta Platforms, Inc.<br>
+    © 2026 Varshaben Mukeshbhai Thummar · Gujarat, India<br>
+    <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a>
+</footer>
+
+</body>
+</html>

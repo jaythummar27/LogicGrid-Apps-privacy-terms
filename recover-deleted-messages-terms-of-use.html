@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Recover Deleted Messages</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #0B1628 0%, #1E3A8A 55%, #1D4ED8 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(99,102,241,.2) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 70%, rgba(14,165,233,.15) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon { font-size: 52px; display: block; margin-bottom: 16px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.25)); }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .75; margin-bottom: 20px; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+        .badge { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; backdrop-filter: blur(4px); }
+
+        .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+
+        .toc-strip {
+            background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow);
+            padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2;
+        }
+        .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+        .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+        .toc-links a { font-size: .82rem; color: var(--accent); text-decoration: none; background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; transition: background .15s, color .15s; }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
+        .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+        .icon-indigo { background: #E0E7FF; }
+
+        h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code { font-family: 'SF Mono', 'Fira Code', monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 420px; }
+        thead tr { background: var(--surface); }
+        th { text-align: left; padding: 11px 14px; font-weight: 600; color: var(--ink); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #EFF6FF, #F0FDF4);
+            border: 1px solid #BFDBFE;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+        .highlight-box h3 { margin-top: 0; color: var(--navy); }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+        .col-box { background: var(--surface); border-radius: 10px; padding: 16px; border: 1px solid var(--border); }
+        .col-box h3 { color: var(--ink); margin-top: 0; font-size: .9rem; }
+
+        .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+            .two-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">📜</span>
+    <h1>Recover Deleted Messages</h1>
+    <div class="doc-type">Terms of Use</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: August 15, 2026</span>
+        <span class="badge">⚖️ Governed by Indian Law</span>
+        <span class="badge">✅ Google Play Developer Policy Compliant</span>
+        <span class="badge">📱 AdMob Policy Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#acceptance">Acceptance</a>
+            <a href="#license">License</a>
+            <a href="#permitted">Permitted Use</a>
+            <a href="#prohibited">Prohibited Use</a>
+            <a href="#recovery-terms">Notification Recovery</a>
+            <a href="#media-terms">Media Limitations</a>
+            <a href="#cleaner-terms">Cleaner Features</a>
+            <a href="#noguarantee">No Guarantee</a>
+            <a href="#ads-terms">Advertising</a>
+            <a href="#subs-terms">Subscriptions</a>
+            <a href="#ip">Intellectual Property</a>
+            <a href="#trademark">Trademarks</a>
+            <a href="#thirdparty-terms">Third-Party Services</a>
+            <a href="#termination">Termination</a>
+            <a href="#liability">Limitation of Liability</a>
+            <a href="#governing">Governing Law</a>
+            <a href="#changes-terms">Changes</a>
+            <a href="#contact-terms">Contact</a>
+        </div>
+    </div>
+
+    <!-- ── 1. Acceptance ─────────────────────────────────────────── -->
+    <div class="section" id="acceptance">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✅</div>
+            <div><h2>Acceptance of Terms</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>These Terms of Use ("Terms") constitute a legally binding agreement between you ("User") and <strong>Varshaben Mukeshbhai Thummar</strong>, Gujarat, India ("we," "us," "our"), governing your use of <strong>Recover Deleted Messages</strong> (the "App").</p>
+        <div class="callout callout-blue">
+            <strong>By downloading, installing, or using the App, you confirm that you:</strong><br>
+            (a) have read and understood these Terms;<br>
+            (b) are at least 13 years old (or of legal age in your jurisdiction);<br>
+            (c) agree to be bound by these Terms and our Privacy Policy.<br><br>
+            If you do not agree to these Terms, you must immediately uninstall the App and cease using it.
+        </div>
+        <p>These Terms apply to all versions of the App, including all updates and new features released under the same App listing on the Google Play Store.</p>
+    </div>
+
+    <!-- ── 2. License ─────────────────────────────────────────────── -->
+    <div class="section" id="license">
+        <div class="section-head">
+            <div class="section-icon icon-green">📱</div>
+            <div><h2>License Grant</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>Subject to your compliance with these Terms, we grant you a <strong>limited, personal, non-exclusive, non-transferable, revocable license</strong> to:</p>
+        <ul>
+            <li>Download, install, and use the App on Android devices that you own or control</li>
+            <li>Use the App solely for your own personal, non-commercial purposes</li>
+        </ul>
+        <p>This license does not include any right to sublicense, sell, resell, transfer, assign, or otherwise make the App available to any third party. We reserve all rights not expressly granted here.</p>
+    </div>
+
+    <!-- ── 3. Permitted Use ───────────────────────────────────────── -->
+    <div class="section" id="permitted">
+        <div class="section-head">
+            <div class="section-icon icon-teal">🟢</div>
+            <div><h2>Permitted Use</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <p>You are authorized to use the App for the following purposes:</p>
+        <div class="two-col">
+            <div class="col-box">
+                <h3>Core Features</h3>
+                <ul>
+                    <li>Save messages from notifications of apps you choose</li>
+                    <li>View messages after the sender deletes them</li>
+                    <li>Keep a private, local notification history</li>
+                    <li>Search, favourite and export your saved history</li>
+                </ul>
+            </div>
+            <div class="col-box">
+                <h3>Optional Features</h3>
+                <ul>
+                    <li>Save media attached to captured notifications</li>
+                    <li>Find and remove duplicate photos, videos and files</li>
+                    <li>Analyse and clean up device storage</li>
+                    <li>Find and merge duplicate contacts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── 4. Prohibited Use ──────────────────────────────────────── -->
+    <div class="section" id="prohibited">
+        <div class="section-head">
+            <div class="section-icon icon-red">🚫</div>
+            <div><h2>Prohibited Use</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <div class="callout callout-red">
+            Violation of any prohibition below may result in immediate termination of your license and, where applicable, legal action.
+        </div>
+        <p>You agree <strong>not</strong> to:</p>
+        <ul>
+            <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App</li>
+            <li>Use the App for any commercial, business, or revenue-generating purpose without prior written consent</li>
+            <li>Copy, modify, adapt, translate, or create derivative works based on the App</li>
+            <li>Remove, alter, or obscure any proprietary notices, branding, or labels in the App</li>
+            <li>Use automated scripts, bots, scrapers, or crawlers to extract data from the App</li>
+            <li>Attempt to bypass, disable, or interfere with any security or permission control in the App</li>
+            <li>Install or use the App on a device belonging to another person to monitor them without their knowledge and consent</li>
+            <li>Use the App for stalking, harassment, blackmail, fraud or any unlawful purpose</li>
+            <li>Circumvent or interfere with the advertising system, including ad blockers, artificial clicks, or fraudulent impressions</li>
+            <li>Use the App in violation of any applicable local, state, national, or international law</li>
+        </ul>
+    </div>
+
+    <!-- ── 5. Notification-Based Recovery ─────────────────────────── -->
+    <div class="section" id="recovery-terms">
+        <div class="section-head">
+            <div class="section-icon icon-amber">🔔</div>
+            <div><h2>Notification-Based Recovery: How It Works &amp; Its Limits</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>Android's notification listener feature allows the App, once you explicitly enable it in system Settings, to read notifications posted on your device. When a messaging app you have selected posts a notification, the App reads its content and stores a copy locally, so deleting the original message elsewhere does not remove that copy.</p>
+
+        <div class="callout callout-red">
+            <strong>The App cannot do any of the following, and never claims to:</strong>
+            <ul style="margin-top:8px;">
+                <li>Read WhatsApp's or any other app's private storage or database</li>
+                <li>Decrypt, bypass or weaken any messaging app's encryption</li>
+                <li>Retrieve messages, media or backups from any provider's servers</li>
+                <li>Recover anything that existed before the App was installed and notification access was granted</li>
+                <li>Recover a message for which no notification was ever posted on your device</li>
+            </ul>
+        </div>
+
+        <h3>Conditions That Must All Hold</h3>
+        <p>The App, notification access, and app selection must be active; notifications must not be muted or hidden; and the listener must be connected when the message arrives. Manufacturer battery managers, Android version differences, and changes the messaging apps make to their own notification format are outside our control and may affect what is captured.</p>
+    </div>
+
+    <!-- ── 6. Media Recovery Limitations ──────────────────────────── -->
+    <div class="section" id="media-terms">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🖼️</div>
+            <div><h2>Media Recovery Limitations</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <ul>
+            <li>The App saves an image only when a notification genuinely carries one; such previews are usually lower resolution than the original</li>
+            <li>Where a notification only indicates that media was received, the App records that plainly rather than producing a file</li>
+            <li>For media still present on your device, the App can find and copy it — this is locating an existing file, not undeleting one</li>
+            <li>On Android 11+, items in the system trash can be shown and restored; Android 10 and below has no such trash</li>
+            <li>A file permanently erased from device storage <strong>cannot be recovered</strong> by this or any non-root app</li>
+        </ul>
+    </div>
+
+    <!-- ── 7. Cleaner Features ────────────────────────────────────── -->
+    <div class="section" id="cleaner-terms">
+        <div class="section-head">
+            <div class="section-icon icon-green">🧹</div>
+            <div><h2>Cleaner &amp; Deletion Features</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <ul>
+            <li>Every cleanup category is a <strong>suggestion</strong>. The App never deletes anything on its own initiative</li>
+            <li>Duplicate detection compares file content (SHA-256), not file names — only byte-for-byte identical files are marked as duplicates</li>
+            <li>You must select items and confirm; on Android 11+ the system shows a further confirmation dialog</li>
+            <li>Deletion you confirm is your decision and, in most cases, irreversible — review your selection before confirming</li>
+        </ul>
+    </div>
+
+    <!-- ── 8. No Guarantee of Recovery ────────────────────────────── -->
+    <div class="section" id="noguarantee">
+        <div class="section-head">
+            <div class="section-icon icon-red">⚠️</div>
+            <div><h2>No Guarantee of Recovery or Restoration</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <div class="callout callout-red">
+            <strong>IMPORTANT:</strong> We make no promise, warranty or guarantee that any particular message, photo, video or file will be captured, saved, detected as deleted, recovered or restored. Recovery depends on conditions controlled by Android, your device manufacturer, the source messaging app, and your own settings — not by us.
+        </div>
+        <p>Do not use this App as your only backup of anything you cannot afford to lose.</p>
+    </div>
+
+    <!-- ── 9. Advertising Terms ───────────────────────────────────── -->
+    <div class="section" id="ads-terms">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>The free version of the App is supported by advertising through <strong>Google AdMob</strong>. By using the free version, you agree to the display of ads as described below.</p>
+
+        <h3>Your Obligations Regarding Ads</h3>
+        <ul>
+            <li>You agree not to use ad-blocking software, extensions, or tools that prevent ads from displaying in the App</li>
+            <li>You agree not to click on ads fraudulently, repeatedly, or in an automated manner</li>
+            <li>You agree not to attempt to manipulate or interfere with the ad-serving infrastructure</li>
+        </ul>
+
+        <h3>AdMob Terms</h3>
+        <p>Advertising served through AdMob is subject to Google's <a href="https://policies.google.com/technologies/ads" target="_blank">Advertising Policies</a> and <a href="https://support.google.com/admob/answer/48182" target="_blank">AdMob Publisher Policies</a>. We do not control the specific content of ads served.</p>
+
+        <h3>Opting Out</h3>
+        <p>You can opt out of personalized advertising at any time via <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong>. Non-personalized ads may still be shown. Subscribing removes all ads.</p>
+    </div>
+
+    <!-- ── 10. Subscriptions & Payments ───────────────────────────── -->
+    <div class="section" id="subs-terms">
+        <div class="section-head">
+            <div class="section-icon icon-blue">💳</div>
+            <div><h2>Subscriptions &amp; Payments</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <ul>
+            <li>The App offers an optional paid subscription whose benefit is removal of advertising. Every recovery, history, duplicate-detection and cleanup feature is available without paying</li>
+            <li>Purchases are processed by <strong>Google Play Billing</strong>; we never see your payment details. Entitlements are managed via <strong>RevenueCat</strong></li>
+            <li>Subscriptions renew automatically at the then-current price until cancelled. Payment is charged to your Google Play account at purchase and at each renewal</li>
+            <li><strong>Cancel any time</strong> in the Google Play Store under Payments &amp; subscriptions. Access continues until the end of the paid period</li>
+            <li>Refunds follow Google Play's refund policy; we cannot issue refunds directly for Play purchases</li>
+            <li>You can restore a previous purchase on a new device from the App's premium screen</li>
+        </ul>
+    </div>
+
+    <!-- ── 11. Intellectual Property ──────────────────────────────── -->
+    <div class="section" id="ip">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">©️</div>
+            <div><h2>Intellectual Property</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p>All intellectual property rights in the App — including source code, design, UI/UX, the name "Recover Deleted Messages," and associated graphics — are the exclusive property of Varshaben Mukeshbhai Thummar. These Terms do not transfer any intellectual property rights to you.</p>
+        <h3>Your Data</h3>
+        <p>Messages, media and other content you save using the App remain yours. We claim no ownership over it and have no access to it.</p>
+    </div>
+
+    <!-- ── 12. Trademarks & Non-Affiliation ───────────────────────── -->
+    <div class="section" id="trademark">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">🏷️</div>
+            <div><h2>Third-Party Trademarks &amp; Non-Affiliation</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <div class="highlight-box">
+            <h3>WhatsApp is a trademark of WhatsApp LLC. Telegram, Signal, Messenger and Instagram are trademarks of their respective owners.</h3>
+            <p><strong>This App is an independent product. It is not affiliated with, endorsed by, sponsored by, authorised by or connected to WhatsApp LLC, Meta Platforms, Inc., or any other messaging service.</strong> Any reference to those names is nominative and descriptive only — used to state which apps' notifications this App can work with. The App does not modify, patch, extend, replace or integrate with any of those applications, and does not communicate with their servers.</p>
+        </div>
+    </div>
+
+    <!-- ── 13. Third-Party Services ───────────────────────────────── -->
+    <div class="section" id="thirdparty-terms">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔗</div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>The App integrates the following third-party services. Your use of them through the App is also subject to their own terms:</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Service</th><th>Provider</th><th>Applicable Terms</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Google LLC</td>
+                        <td><a href="https://policies.google.com/terms" target="_blank">Google ToS</a> · <a href="https://support.google.com/admob/answer/48182" target="_blank">AdMob Policies</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google User Messaging Platform</strong></td>
+                        <td>Google LLC</td>
+                        <td><a href="https://policies.google.com/terms" target="_blank">Google ToS</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play Billing</strong></td>
+                        <td>Google LLC</td>
+                        <td><a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank">Play Terms</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RevenueCat</strong></td>
+                        <td>RevenueCat, Inc.</td>
+                        <td><a href="https://www.revenuecat.com/terms/" target="_blank">RevenueCat ToS</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>We are not responsible for the availability, accuracy, or practices of any third-party service. Outages or changes to these services are beyond our control.</p>
+    </div>
+
+    <!-- ── 14. Termination ────────────────────────────────────────── -->
+    <div class="section" id="termination">
+        <div class="section-head">
+            <div class="section-icon icon-red">🔚</div>
+            <div><h2>Termination</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>These Terms are effective until terminated.</p>
+        <h3>Termination by You</h3>
+        <p>You may terminate these Terms at any time by uninstalling the App. Uninstalling deletes all locally stored data.</p>
+        <h3>Termination by Us</h3>
+        <p>We may terminate or suspend your license immediately, without prior notice, if you violate these Terms, if required by law or Google Play policy, or if we decide to discontinue the App.</p>
+        <p>Upon termination, the license in Section 2 automatically revokes. Sections 8, 11, 12, 15, and 16 survive termination.</p>
+    </div>
+
+    <!-- ── 15. Limitation of Liability ────────────────────────────── -->
+    <div class="section" id="liability">
+        <div class="section-head">
+            <div class="section-icon icon-amber">⚖️</div>
+            <div><h2>Disclaimer of Warranties &amp; Limitation of Liability</h2><div class="section-num">Section 15</div></div>
+        </div>
+        <h3>Disclaimer of Warranties</h3>
+        <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.</p>
+        <p>We do not warrant that:</p>
+        <ul>
+            <li>The App will be available, uninterrupted, or error-free</li>
+            <li>Any particular message, photo, video or file will be captured, detected or recovered</li>
+            <li>The App will be free of viruses or other harmful components</li>
+            <li>Third-party services (AdMob, Play Billing, RevenueCat) will be continuously available</li>
+        </ul>
+
+        <h3>Limitation of Liability</h3>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR:</p>
+        <ul>
+            <li>Any indirect, incidental, special, consequential, exemplary, or punitive damages</li>
+            <li>Loss of profits, data, files, messages, media, goodwill, or business opportunities</li>
+            <li>Any file you choose to delete using the App</li>
+            <li>Damages arising from third-party service failures, outages, or policy changes</li>
+            <li>Any damages exceeding INR 500 (five hundred rupees), to the extent permitted by law</li>
+        </ul>
+        <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so the above limitations may not fully apply to you. Nothing here excludes liability for death, personal injury, or fraud where such exclusion is unlawful.</p>
+    </div>
+
+    <!-- ── 16. Indemnification ─────────────────────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🛡️</div>
+            <div><h2>Indemnification</h2><div class="section-num">Section 16</div></div>
+        </div>
+        <p>You agree to indemnify, defend, and hold harmless Varshaben Mukeshbhai Thummar from any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or in connection with:</p>
+        <ul>
+            <li>Your use or misuse of the App</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any applicable law or third-party rights</li>
+            <li>Any claim brought by a person whose communications were saved on a device you controlled</li>
+        </ul>
+    </div>
+
+    <!-- ── 17. Governing Law ───────────────────────────────────────── -->
+    <div class="section" id="governing">
+        <div class="section-head">
+            <div class="section-icon icon-blue">🏛️</div>
+            <div><h2>Governing Law &amp; Dispute Resolution</h2><div class="section-num">Section 17</div></div>
+        </div>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>Republic of India</strong>, without regard to its conflict of law provisions.</p>
+        <p>Any dispute, claim, or controversy arising out of or relating to these Terms or the use of the App shall be subject to the exclusive jurisdiction of the competent courts located in <strong>Gujarat, India</strong>.</p>
+        <p>Before initiating formal legal proceedings, you agree to first contact us at <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a> and attempt to resolve the dispute informally within 30 days.</p>
+
+        <h3>Google Play Compliance</h3>
+        <p>This App is distributed via the Google Play Store and complies with <a href="https://play.google.com/about/developer-content-policy/" target="_blank">Google Play Developer Program Policies</a>, including the sensitive-permissions policy for notification access, the personal-and-sensitive-data policy (message and media data are processed on-device only), the ads policy, and the target-audience policy (this App targets users 18 and over).</p>
+    </div>
+
+    <!-- ── 18. Changes to Terms ───────────────────────────────────── -->
+    <div class="section" id="changes-terms">
+        <div class="section-head">
+            <div class="section-icon icon-teal">🔄</div>
+            <div><h2>Changes to These Terms</h2><div class="section-num">Section 18</div></div>
+        </div>
+        <p>We may revise these Terms at any time. When we make material changes, we will update the "Last Updated" date at the top of this page, and for significant changes, may provide an in-app notification.</p>
+        <p><strong>Your continued use of the App after revised Terms take effect constitutes your acceptance of them.</strong> If you do not agree, you must stop using the App and uninstall it.</p>
+    </div>
+
+    <!-- ── 19. Contact ────────────────────────────────────────────── -->
+    <div class="section" id="contact-terms">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact</h2><div class="section-num">Section 19</div></div>
+        </div>
+        <p>For questions about these Terms, to report a policy concern, or to seek clarification:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a></li>
+            <li><strong>Developer:</strong> Varshaben Mukeshbhai Thummar</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+        <div class="callout callout-blue">
+            By using the App, you acknowledge that you have read these Terms of Use and the Privacy Policy, and agree to be bound by both documents.
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>Recover Deleted Messages</strong><br>
+    © 2026 Varshaben Mukeshbhai Thummar · Gujarat, India<br>
+    <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a>
+</footer>
+
+</body>
+</html>

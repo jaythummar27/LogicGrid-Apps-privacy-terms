@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Home Workout Without Equipment</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+
+        /* ── Header ─────────────────────────────────── */
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, var(--sky) 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(59,130,246,.25) 0%, transparent 60%),
+                        radial-gradient(ellipse at 20% 80%, rgba(14,165,233,.18) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon {
+            font-size: 52px;
+            display: block;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,.25));
+        }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type {
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: .75;
+            margin-bottom: 20px;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .badge {
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: .78rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        /* ── Layout ─────────────────────────────────── */
+        .page-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ── Nav strip ──────────────────────────────── */
+        .toc-strip {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 20px 24px;
+            margin: -28px 0 32px;
+            position: relative;
+            z-index: 2;
+        }
+        .toc-strip p {
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .toc-links a {
+            font-size: .82rem;
+            color: var(--accent);
+            text-decoration: none;
+            background: var(--surface);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-weight: 500;
+            transition: background .15s, color .15s;
+        }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        /* ── Section Cards ──────────────────────────── */
+        .section {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+            scroll-margin-top: 24px;
+        }
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1.5px solid var(--surface);
+        }
+        .section-icon {
+            width: 42px; height: 42px;
+            border-radius: 11px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -.3px;
+        }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num {
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 1px;
+        }
+
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+
+        strong { font-weight: 600; color: var(--ink); }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface);
+            border-radius: 4px;
+            padding: 1px 6px;
+            font-size: .85em;
+            color: var(--accent);
+            border: 1px solid var(--border);
+        }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; overflow-wrap: anywhere; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Callout boxes ──────────────────────────── */
+        .callout {
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: .93rem;
+            line-height: 1.65;
+        }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+
+        /* ── Tables ─────────────────────────────────── */
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+        thead tr { background: var(--surface); }
+        th {
+            text-align: left;
+            padding: 11px 14px;
+            font-weight: 600;
+            color: var(--ink);
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            border-bottom: 1px solid var(--border);
+        }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+        .tick { color: var(--green); font-weight: 700; }
+        .cross { color: var(--red); font-weight: 700; }
+
+        /* ── Pill list ──────────────────────────────── */
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+        .pill {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--ink);
+        }
+        .pill-green { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+        .pill-red   { background: #FEE2E2; border-color: #FCA5A5; color: #991B1B; }
+        .pill-blue  { background: #DBEAFE; border-color: #93C5FD; color: #1D4ED8; }
+
+        /* ── Divider ────────────────────────────────── */
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+
+        /* ── Ad section special styling ─────────────── */
+        .ad-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .ad-type-card {
+            background: var(--surface);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+        }
+        .ad-type-card strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: .9rem; }
+        .ad-type-card span { font-size: .83rem; color: var(--muted); line-height: 1.5; }
+
+        /* ── Footer ─────────────────────────────────── */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,.65);
+            text-align: center;
+            padding: 28px 20px;
+            font-size: .85rem;
+            line-height: 1.8;
+        }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">💪</span>
+    <h1>Home Workout Without Equipment</h1>
+    <div class="doc-type">Privacy Policy</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: August 15, 2026</span>
+        <span class="badge">📋 Effective: August 15, 2026</span>
+        <span class="badge">🌐 GDPR-Aware</span>
+        <span class="badge">✅ Google Play Compliant</span>
+        <span class="badge">📱 AdMob Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#intro">Introduction</a>
+            <a href="#collect">Data We Collect</a>
+            <a href="#notcollect">Not Collected</a>
+            <a href="#ads">Advertising (AdMob)</a>
+            <a href="#purchases">Purchases</a>
+            <a href="#thirdparty">Third-Party Services</a>
+            <a href="#storage">Storage &amp; Security</a>
+            <a href="#rights">Your Rights</a>
+            <a href="#permissions">Permissions</a>
+            <a href="#health">Health &amp; Fitness Data</a>
+            <a href="#children">Children</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- ── 1. Introduction ───────────────────────────────────────── -->
+    <div class="section" id="intro">
+        <div class="section-head">
+            <div class="section-icon icon-blue">📖</div>
+            <div><h2>Introduction</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>Welcome to <strong>Home Workout Without Equipment</strong> (the "App"), developed by <strong>Varshaben Mukeshbhai Thummar</strong> ("we," "us," "our"), based in India. The App is a bodyweight fitness and workout app for Android devices.</p>
+        <p>This Privacy Policy describes what information the App handles, why, and the choices you have. <strong>Please read it before using the App.</strong></p>
+        <div class="callout callout-blue">
+            By downloading, installing, or using the App, you acknowledge that you have read and agree to this Privacy Policy. If you do not agree, please uninstall and do not use the App.
+        </div>
+        <p>The App has no account or sign-in of any kind. This policy covers the App's local storage of your workout data, the advertising served through Google AdMob, the optional premium purchase, and the small set of Android permissions the App uses.</p>
+    </div>
+
+    <!-- ── 2. Data We Collect ─────────────────────────────────────── -->
+    <div class="section" id="collect">
+        <div class="section-head">
+            <div class="section-icon icon-teal">📊</div>
+            <div><h2>Information the App Stores</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>Everything below is created by you while using the App and is stored <strong>only on your device</strong>. We do not operate a server, and we cannot see or receive any of it.</p>
+
+        <h3>2.1 Your Profile</h3>
+        <ul>
+            <li>Gender, age, height, body weight, fitness level and goal — used to size your workouts and estimate calories</li>
+        </ul>
+
+        <h3>2.2 Your Workout Data</h3>
+        <ul>
+            <li>Completed workout sessions: date, duration, exercises done, estimated calories, workout title</li>
+            <li>Multi-week program progress: which day of a plan you have completed</li>
+            <li>Body-weight log entries for the progress chart</li>
+            <li>Favourite exercises</li>
+        </ul>
+        <p>All of the above is stored in a local database on your device (Android Room/SQLite). Nothing here is transmitted to us or to anyone else.</p>
+
+        <h3>2.3 App Settings</h3>
+        <ul>
+            <li>Theme, language, measurement unit, sound/voice/vibration toggles, timer length and reminder time — stored locally so the App remembers your preferences</li>
+        </ul>
+
+        <h3>2.4 Data Collected by Advertising and Billing SDKs</h3>
+        <p>The Google Mobile Ads SDK and Google Play Billing (see Sections 4 and 5) independently collect a small amount of device and advertising data for their own purposes. We do not receive this data ourselves.</p>
+    </div>
+
+    <!-- ── 3. Data NOT Collected ──────────────────────────────────── -->
+    <div class="section" id="notcollect">
+        <div class="section-head">
+            <div class="section-icon icon-green">🚫</div>
+            <div><h2>Information We Do Not Collect</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <div class="callout callout-green">
+            <strong>The App does not collect or ask you for:</strong> your name, email address, phone number, postal address, an account or password of any kind, your location, camera or photo access, contacts, calendar, SMS/messages, or files.
+        </div>
+        <p>There is no login. There is no analytics SDK of ours and no crash-reporting SDK of ours in the App. The App requests no location permission at all.</p>
+    </div>
+
+    <!-- ── 4. Ads ──────────────────────────────────────────────────── -->
+    <div class="section" id="ads">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising — Google AdMob</h2><div class="section-num">Section 04</div></div>
+        </div>
+
+        <div class="callout callout-amber">
+            <strong>AdMob Disclosure:</strong> The free version of the App uses Google AdMob to display advertisements. AdMob may collect and use data from your device to serve personalized or non-personalized ads. This section explains how advertising works in the App.
+        </div>
+
+        <h3>Ad Formats Used</h3>
+        <div class="ad-types">
+            <div class="ad-type-card">
+                <strong>📱 Banner Ads</strong>
+                <span>A small ad shown on the home screen while you browse.</span>
+            </div>
+            <div class="ad-type-card">
+                <strong>🗂️ Native Ads</strong>
+                <span>Ads styled to match the App, shown occasionally in exercise lists and a few other screens — never during a workout.</span>
+            </div>
+            <div class="ad-type-card">
+                <strong>⚡ Interstitial Ads</strong>
+                <span>Full-screen ads shown occasionally at natural transition points, paced to limit how often they appear. Never shown during the workout player.</span>
+            </div>
+            <div class="ad-type-card">
+                <strong>🔓 App-Open Ads</strong>
+                <span>Shown when you return to the App after being away for a while — not on your very first launch.</span>
+            </div>
+            <div class="ad-type-card">
+                <strong>🎬 Rewarded Ads</strong>
+                <span>Opt-in video ads you may choose to watch to remove all ads for a limited time. Watching is never mandatory.</span>
+            </div>
+        </div>
+
+        <h3>Data Collected by AdMob</h3>
+        <p>Google AdMob independently collects the following for ad serving and measurement:</p>
+        <ul>
+            <li>Your device's advertising identifier (a resettable ID you control)</li>
+            <li>Device information (model, OS version, language)</li>
+            <li>IP address (used to infer an approximate geographic location)</li>
+            <li>Ad interaction signals (impressions, clicks)</li>
+        </ul>
+        <p>This data is collected and processed by Google LLC under its own privacy policy. We do not have access to it in an identifiable form; we see only aggregate earnings reports.</p>
+
+        <h3>Ad Personalization &amp; Your Choices</h3>
+        <ul>
+            <li><strong>In the EEA, the UK and Switzerland</strong>, the App shows a consent form the first time it starts. You can reopen it at any time from the App's <em>Settings</em> screen to change or withdraw your choice.</li>
+            <li><strong>On any device</strong>, you can opt out of ad personalization or reset your advertising ID: <strong>Android Settings → Privacy → Ads</strong>.</li>
+            <li><strong>Removing ads entirely:</strong> the optional premium purchase described in Section 5 turns off all advertising in the App.</li>
+        </ul>
+        <p>The App is not directed at children, and we do not knowingly serve child-directed advertising. Maximum ad content rating is set to General audiences.</p>
+
+        <div class="divider"></div>
+        <p>For Google's data practices related to advertising, see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+    </div>
+
+    <!-- ── 5. Purchases ────────────────────────────────────────────── -->
+    <div class="section" id="purchases">
+        <div class="section-head">
+            <div class="section-icon icon-purple">💎</div>
+            <div><h2>Purchases</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>The App offers an optional paid upgrade that removes ads. Payment is handled entirely by <strong>Google Play Billing</strong> — we never see or store your card number, bank details or billing address.</p>
+        <p>To keep your purchase working across reinstalls and devices, purchase status may be managed by <strong>RevenueCat</strong>, which receives an anonymous app-user identifier, your purchase/subscription status, and basic device and country information. It does not receive your name, email address or any workout data. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+        <p>You can restore an existing purchase at any time using the "Restore purchase" option in the App.</p>
+    </div>
+
+    <!-- ── 6. Third-Party Services ─────────────────────────────────── -->
+    <div class="section" id="thirdparty">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔗</div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>The App integrates the following third-party services. Each operates under its own privacy policy and data practices, independent of us.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Data Sent?</th>
+                        <th>Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Google LLC</td>
+                        <td>Advertising</td>
+                        <td><span class="tick">✔ Advertising ID, device info</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google User Messaging Platform</strong></td>
+                        <td>Google LLC</td>
+                        <td>Ad consent management</td>
+                        <td><span class="tick">✔ Your consent choice</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play Billing</strong></td>
+                        <td>Google LLC</td>
+                        <td>Processes the premium purchase</td>
+                        <td><span class="tick">✔ Purchase data, handled by Google</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RevenueCat</strong></td>
+                        <td>RevenueCat, Inc.</td>
+                        <td>Manages subscription entitlement</td>
+                        <td><span class="tick">✔ Anonymous user ID, purchase status</span></td>
+                        <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>GitHub (content hosting)</strong></td>
+                        <td>GitHub, Inc.</td>
+                        <td>Serves optional exercise images and content updates</td>
+                        <td><span class="tick">✔ Your IP address, as with any web request</span></td>
+                        <td><a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play Store</strong></td>
+                        <td>Google LLC</td>
+                        <td>Distributes and updates the App</td>
+                        <td><span class="tick">✔ Handled by Google, outside the App</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>These services may process data on servers outside your country. Each publishes its own safeguards for international transfers in the policies linked above.</p>
+    </div>
+
+    <!-- ── 7. Storage & Security ──────────────────────────────────── -->
+    <div class="section" id="storage">
+        <div class="section-head">
+            <div class="section-icon icon-green">🔒</div>
+            <div><h2>Data Storage &amp; Security</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Data Type</th><th>Where Stored</th><th>Sent to Our Servers?</th><th>Retention</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Profile &amp; settings</td><td>Device (app preferences)</td><td><span class="cross">✘ Never — we have no server</span></td><td>Until deleted by you or App uninstalled</td></tr>
+                    <tr><td>Workout history, program progress, weight log, favourites</td><td>Device (Room/SQLite)</td><td><span class="cross">✘ Never — we have no server</span></td><td>Until deleted by you or App uninstalled</td></tr>
+                    <tr><td>Backup file you export</td><td>A location you choose on your device</td><td><span class="cross">✘ Never</span></td><td>Until you delete the file</td></tr>
+                    <tr><td>Advertising identifiers &amp; ad interactions</td><td>AdMob servers</td><td><span class="tick">✔ To Google only</span></td><td>Per Google's retention policy</td></tr>
+                    <tr><td>Purchase / entitlement status</td><td>Google Play &amp; RevenueCat servers</td><td><span class="tick">✔ To Google / RevenueCat only</span></td><td>Per their retention policies</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Our Security Measures</h3>
+        <ul>
+            <li>Local data lives inside Android's private application sandbox, which other apps cannot read</li>
+            <li>All network requests made by the App use HTTPS/TLS encryption</li>
+            <li>We do not operate any backend server that stores your personal or workout data</li>
+        </ul>
+        <p>No method of electronic storage or transmission is completely secure, and we do not claim otherwise.</p>
+    </div>
+
+    <!-- ── 8. Your Rights ─────────────────────────────────────────── -->
+    <div class="section" id="rights">
+        <div class="section-head">
+            <div class="section-icon icon-blue">⚖️</div>
+            <div><h2>Your Rights &amp; Controls</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>Because your workout and profile data never leaves your device, you can exercise most of your rights directly in the App:</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Right</th><th>How to Exercise It</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Access your data</strong></td><td>All your data is stored locally — open the App to view it</td></tr>
+                    <tr><td><strong>Export your data</strong></td><td>Settings → Export backup (a JSON file saved wherever you choose)</td></tr>
+                    <tr><td><strong>Restore your data</strong></td><td>Settings → Restore backup, from a previously exported file</td></tr>
+                    <tr><td><strong>Delete all data</strong></td><td>Settings → Erase data (permanently wipes your local workout history and progress)</td></tr>
+                    <tr><td><strong>Opt out of ad personalization</strong></td><td>Android Settings → Privacy → Ads, or the Privacy options entry in the App's Settings</td></tr>
+                    <tr><td><strong>Reset your advertising ID</strong></td><td>Android Settings → Privacy → Ads</td></tr>
+                    <tr><td><strong>Cancel or manage the premium purchase</strong></td><td>Google Play Store → your profile → Payments &amp; subscriptions</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>For any request we can help with directly, or for GDPR (EU/EEA), CCPA (California), India's DPDP Act, or other applicable data-subject rights requests, contact us at the email address below. We aim to respond within 30 days.</p>
+        <p>We do not sell or share personal information for cross-context behavioural advertising, other than the advertising-identifier processing described in Section 4, which you can opt out of using the controls listed above.</p>
+    </div>
+
+    <!-- ── 9. Permissions ─────────────────────────────────────────── -->
+    <div class="section" id="permissions">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🔑</div>
+            <div><h2>Permissions Summary</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Permission</th><th>Purpose</th><th>Optional?</th><th>Data Leaves Device?</th></tr></thead>
+                <tbody>
+                    <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show your daily workout reminder</td><td>Yes — the App works fully without it</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code></td><td>Fire the reminder at the exact time you chose</td><td>Yes</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Re-arm the reminder after your device restarts</td><td>Only relevant if reminders are enabled</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>VIBRATE</code></td><td>Haptic feedback during the workout timer</td><td>Yes — can be turned off in Settings</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>WAKE_LOCK</code></td><td>Keep the screen usable while a workout is running</td><td>—</td><td><span class="cross">✘ Never</span></td></tr>
+                    <tr><td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td><td>Load ads, optional content updates, and verify purchases</td><td>Core to those optional features</td><td><span class="tick">✔ Only to the services in Section 6</span></td></tr>
+                    <tr><td><code>AD_ID</code> (Google advertising ID)</td><td>Required by the Google Mobile Ads SDK to serve ads</td><td>Removed automatically once you buy the ad-free upgrade</td><td><span class="tick">✔ To Google (AdMob)</span></td></tr>
+                    <tr><td><code>com.android.vending.BILLING</code></td><td>Lets the App offer the premium purchase through Google Play</td><td>Only used if you choose to purchase</td><td><span class="tick">✔ To Google Play</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ── 10. Health & Fitness Data ──────────────────────────────── -->
+    <div class="section" id="health">
+        <div class="section-head">
+            <div class="section-icon icon-red">🏃</div>
+            <div><h2>Health &amp; Fitness Information</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>The App records general fitness information you provide — such as your body weight, workout duration and exercises completed — to show your own history and progress back to you, and to estimate calories burned. This information is <strong>never transmitted to us</strong>; it stays in the local database described in Section 2.</p>
+        <p>Calorie figures shown in the App are <strong>estimates</strong>, calculated on your device from published MET values and the body weight you enter. They are not medical measurements.</p>
+        <p>The App is not a medical device and does not diagnose, treat, cure or prevent any medical condition. See the <a href="terms-of-use.html">Terms of Use</a> for the full fitness disclaimer.</p>
+    </div>
+
+    <!-- ── 11. Children ───────────────────────────────────────────── -->
+    <div class="section" id="children">
+        <div class="section-head">
+            <div class="section-icon icon-red">👶</div>
+            <div><h2>Children's Privacy</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p>The App is intended for users aged <strong>18 and above</strong>. It is not directed at children, and we do not knowingly collect personal information from children.</p>
+        <p>If you are a parent or guardian and believe a child has used this App and provided information, contact us at <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a> and we will take steps to address it.</p>
+    </div>
+
+    <!-- ── 12. International Transfers ───────────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-teal">🌐</div>
+            <div><h2>International Data Transfers</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>We are based in India and do not operate servers that process your data. Third-party services we use (Google, RevenueCat) may process data on servers outside India or the EU, in accordance with their own data-protection frameworks and applicable law.</p>
+    </div>
+
+    <!-- ── 13. Policy Changes ──────────────────────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔄</div>
+            <div><h2>Changes to This Policy</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>We may update this Privacy Policy when the App changes or when applicable law requires it. We will update the "Last Updated" date at the top of this page, and note material changes in the App's release notes or in the App itself.</p>
+        <p>Continued use of the App after an updated policy takes effect means you accept the changes.</p>
+    </div>
+
+    <!-- ── 14. Contact ────────────────────────────────────────────── -->
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact Us</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>For privacy-related questions, data deletion requests, or any other inquiries:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a></li>
+            <li><strong>Developer:</strong> Varshaben Mukeshbhai Thummar</li>
+            <li><strong>Location:</strong> India</li>
+            <li><strong>App:</strong> Home Workout Without Equipment (<code>com.jaystudio.home.workout.noeqipment</code>)</li>
+        </ul>
+        <div class="callout callout-blue">
+            We aim to respond to all privacy-related inquiries within <strong>30 days</strong>.
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>Home Workout Without Equipment</strong><br>
+    © 2026 Varshaben Mukeshbhai Thummar · India<br>
+    <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a>
+</footer>
+
+</body>
+</html>

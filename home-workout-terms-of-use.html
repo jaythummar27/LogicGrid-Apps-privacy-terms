@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Home Workout Without Equipment</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #0B1628 0%, #1E3A8A 55%, #1D4ED8 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(99,102,241,.2) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 70%, rgba(14,165,233,.15) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon { font-size: 52px; display: block; margin-bottom: 16px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.25)); }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .75; margin-bottom: 20px; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+        .badge { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; backdrop-filter: blur(4px); }
+
+        .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+
+        .toc-strip {
+            background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow);
+            padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2;
+        }
+        .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+        .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+        .toc-links a { font-size: .82rem; color: var(--accent); text-decoration: none; background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; transition: background .15s, color .15s; }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
+        .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+        .icon-indigo { background: #E0E7FF; }
+
+        h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code { font-family: 'SF Mono', 'Fira Code', monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; overflow-wrap: anywhere; }
+        a:hover { text-decoration: underline; }
+
+        .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 420px; }
+        thead tr { background: var(--surface); }
+        th { text-align: left; padding: 11px 14px; font-weight: 600; color: var(--ink); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+        .col-box { background: var(--surface); border-radius: 10px; padding: 16px; border: 1px solid var(--border); }
+        .col-box h3 { color: var(--ink); margin-top: 0; font-size: .9rem; }
+
+        .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+            .two-col { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">📜</span>
+    <h1>Home Workout Without Equipment</h1>
+    <div class="doc-type">Terms of Use</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: August 15, 2026</span>
+        <span class="badge">⚖️ Governed by Indian Law</span>
+        <span class="badge">✅ Google Play Developer Policy Compliant</span>
+        <span class="badge">📱 AdMob Policy Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#acceptance">Acceptance</a>
+            <a href="#license">License</a>
+            <a href="#permitted">Permitted Use</a>
+            <a href="#prohibited">Prohibited Use</a>
+            <a href="#fitness">Fitness Disclaimer</a>
+            <a href="#ads-terms">Advertising</a>
+            <a href="#purchases-terms">Purchases</a>
+            <a href="#ip">Intellectual Property</a>
+            <a href="#thirdparty-terms">Third-Party Services</a>
+            <a href="#termination">Termination</a>
+            <a href="#liability">Limitation of Liability</a>
+            <a href="#governing">Governing Law</a>
+            <a href="#changes-terms">Changes</a>
+            <a href="#contact-terms">Contact</a>
+        </div>
+    </div>
+
+    <!-- ── 1. Acceptance ─────────────────────────────────────────── -->
+    <div class="section" id="acceptance">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✅</div>
+            <div><h2>Acceptance of Terms</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>These Terms of Use ("Terms") are a legally binding agreement between you ("User") and <strong>Varshaben Mukeshbhai Thummar</strong>, India ("we," "us," "our"), governing your use of <strong>Home Workout Without Equipment</strong> (the "App").</p>
+        <div class="callout callout-blue">
+            <strong>By downloading, installing, or using the App, you confirm that you:</strong><br>
+            (a) have read and understood these Terms;<br>
+            (b) are at least 18 years old, or the age of majority in your jurisdiction;<br>
+            (c) agree to be bound by these Terms and our Privacy Policy.<br><br>
+            If you do not agree to these Terms, you must uninstall the App and stop using it.
+        </div>
+        <p>These Terms apply to all versions of the App, including all updates and new features released under the same App listing on the Google Play Store.</p>
+    </div>
+
+    <!-- ── 2. License ─────────────────────────────────────────────── -->
+    <div class="section" id="license">
+        <div class="section-head">
+            <div class="section-icon icon-green">📱</div>
+            <div><h2>License Grant</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>Subject to your compliance with these Terms, we grant you a <strong>limited, personal, non-exclusive, non-transferable, revocable license</strong> to:</p>
+        <ul>
+            <li>Download, install, and use the App on Android devices that you own or control</li>
+            <li>Use the App solely for your own personal, non-commercial fitness purposes</li>
+        </ul>
+        <p>This license does not include any right to sublicense, sell, resell, transfer, assign, or otherwise make the App available to any third party. We reserve all rights not expressly granted in these Terms.</p>
+    </div>
+
+    <!-- ── 3. Permitted Use ───────────────────────────────────────── -->
+    <div class="section" id="permitted">
+        <div class="section-head">
+            <div class="section-icon icon-teal">🟢</div>
+            <div><h2>Permitted Use</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <p>You are authorized to use the App for the following purposes:</p>
+        <div class="two-col">
+            <div class="col-box">
+                <h3>Core Features</h3>
+                <ul>
+                    <li>Browse the exercise library and follow workouts</li>
+                    <li>Use the guided workout player and timers</li>
+                    <li>Follow multi-week workout programs</li>
+                    <li>Track your workout history and progress</li>
+                </ul>
+            </div>
+            <div class="col-box">
+                <h3>Optional Features</h3>
+                <ul>
+                    <li>Set a daily workout reminder</li>
+                    <li>Log your body weight</li>
+                    <li>Export or restore a local backup of your data</li>
+                    <li>Purchase the ad-free upgrade</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── 4. Prohibited Use ──────────────────────────────────────── -->
+    <div class="section" id="prohibited">
+        <div class="section-head">
+            <div class="section-icon icon-red">🚫</div>
+            <div><h2>Prohibited Use</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <div class="callout callout-red">
+            Violation of any prohibition below may result in immediate termination of your license and, where applicable, legal action.
+        </div>
+        <p>You agree <strong>not</strong> to:</p>
+        <ul>
+            <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App</li>
+            <li>Use the App for any commercial, business, or revenue-generating purpose without our prior written consent</li>
+            <li>Copy, modify, adapt, translate, or create derivative works based on the App</li>
+            <li>Remove, alter, or obscure any proprietary notices, branding, or labels in the App</li>
+            <li>Use automated scripts, bots, scrapers, or crawlers to extract data or content from the App</li>
+            <li>Attempt to bypass, disable, or interfere with any security or access-control feature</li>
+            <li>Use the App in violation of any applicable local, state, national, or international law</li>
+            <li>Circumvent or interfere with the advertising system, including using ad blockers within the App, artificially clicking ads, or generating fraudulent ad impressions</li>
+            <li>Tamper with or attempt to bypass the purchase or entitlement system</li>
+            <li>Impersonate us or any representative of ours in communications or reviews</li>
+        </ul>
+    </div>
+
+    <!-- ── 5. Fitness Disclaimer ──────────────────────────────────── -->
+    <div class="section" id="fitness">
+        <div class="section-head">
+            <div class="section-icon icon-red">⚠️</div>
+            <div><h2>Fitness Disclaimer</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <div class="callout callout-red">
+            <strong>IMPORTANT:</strong> Home Workout Without Equipment provides general fitness and exercise information for healthy adults. It is <strong>not a medical device</strong>, and it does <strong>not diagnose, treat, cure or prevent any medical condition</strong>. Nothing in the App is medical advice, and it is not a substitute for guidance from a qualified healthcare professional.
+        </div>
+
+        <h3>Before You Start</h3>
+        <p>Talk to a doctor or another qualified healthcare professional before beginning a new exercise routine — particularly if you are pregnant or recently gave birth, are recovering from surgery or an injury, have a heart, joint, back or blood-pressure condition, take medication that affects exercise, or have not exercised in a long time.</p>
+
+        <h3>While You Train</h3>
+        <p>Work at a level that suits you. Warm up first, follow the form instructions shown for each exercise, and stop straight away if you feel pain, dizziness, faintness, chest discomfort or shortness of breath. Seek medical attention if symptoms persist. You know your body better than an app does — skip or swap anything that does not feel right.</p>
+
+        <h3>About the Numbers</h3>
+        <p>Calorie figures shown in the App are <strong>estimates</strong>, calculated on your device from published MET values and the body weight you enter. They are approximations for comparison over time, not measurements. Workout durations and program structures are general guidance, not a prescription tailored to you by a professional.</p>
+
+        <h3>About Results</h3>
+        <p>Fitness results depend on many factors including your starting point, consistency, sleep, nutrition, genetics and health. <strong>Individual results vary, and the App makes no promise about any specific outcome.</strong></p>
+
+        <h3>Your Responsibility</h3>
+        <ul>
+            <li>You decide whether an exercise is appropriate for you, and you stop if it is not</li>
+            <li>You are responsible for exercising in a space that is clear, level and safe</li>
+            <li>You are responsible for the accuracy of any information you enter, such as your body weight</li>
+        </ul>
+        <p><strong>You use the App and perform any exercise it describes entirely at your own risk.</strong></p>
+    </div>
+
+    <!-- ── 6. Advertising Terms ───────────────────────────────────── -->
+    <div class="section" id="ads-terms">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>The free version of the App is supported by advertising through <strong>Google AdMob</strong>. By using the free version, you agree to the display of advertisements as described below.</p>
+
+        <h3>Ad Formats</h3>
+        <ul>
+            <li><strong>Banner, native and app-open ads:</strong> shown on the home screen, in browsing screens, and when you return to the App. Never shown during the workout player.</li>
+            <li><strong>Interstitial ads:</strong> full-screen ads shown occasionally at natural transition points, paced to limit interruption.</li>
+            <li><strong>Rewarded video ads:</strong> optional ads you may choose to watch in exchange for a temporary ad-free period. Never compulsory.</li>
+        </ul>
+
+        <h3>Your Obligations Regarding Ads</h3>
+        <ul>
+            <li>You agree not to use ad-blocking software, extensions, or tools that prevent ads from being shown within the App</li>
+            <li>You agree not to click on ads fraudulently, repeatedly, or in an automated manner</li>
+            <li>You agree not to attempt to manipulate or interfere with the ad-serving infrastructure</li>
+        </ul>
+
+        <h3>AdMob Terms</h3>
+        <p>Advertising served through Google AdMob is subject to Google's <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Advertising Policies</a> and <a href="https://support.google.com/admob/answer/48182" target="_blank" rel="noopener">AdMob Publisher Policies</a>.</p>
+
+        <h3>Ad Content</h3>
+        <p>We do not control the specific content of advertisements served by AdMob or its advertising partners. If you encounter an ad you believe violates Google's policies, you may report it using the "Why this ad?" or "Report this ad" option in the ad itself.</p>
+
+        <h3>Opting Out</h3>
+        <p>You can opt out of personalized advertising at any time via Android device settings: <strong>Settings → Privacy → Ads</strong>, or from the Privacy options entry in the App's Settings screen.</p>
+    </div>
+
+    <!-- ── 7. Purchases Terms ─────────────────────────────────────── -->
+    <div class="section" id="purchases-terms">
+        <div class="section-head">
+            <div class="section-icon icon-purple">💎</div>
+            <div><h2>Purchases</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <p>The App offers an optional paid upgrade that removes advertising, purchased through <strong>Google Play Billing</strong>. Prices and any billing period are shown in the App before you buy and are set in your local currency by Google Play.</p>
+        <ul>
+            <li><strong>To cancel a subscription</strong> (if the upgrade is offered as one), open the Google Play Store app → your profile → <em>Payments &amp; subscriptions</em> → <em>Subscriptions</em>. Uninstalling the App does <em>not</em> cancel a subscription.</li>
+            <li><strong>Refunds</strong> are handled by Google under the <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play refund policy</a>. We do not process payments and cannot issue refunds directly, but contact us and we will help where we can.</li>
+            <li><strong>Restoring a purchase:</strong> use the "Restore purchase" option in the App if you reinstall or change device.</li>
+            <li>We may change the features included in the paid upgrade, or its price, with reasonable notice.</li>
+        </ul>
+        <p>If a statutory right of withdrawal applies where you live, that right is unaffected by anything in this section.</p>
+    </div>
+
+    <!-- ── 8. Intellectual Property ───────────────────────────────── -->
+    <div class="section" id="ip">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">©️</div>
+            <div><h2>Intellectual Property</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>All intellectual property rights in the App — including but not limited to source code, design, UI/UX, branding, the name "Home Workout Without Equipment," and associated logos — are the exclusive property of Varshaben Mukeshbhai Thummar or her licensors.</p>
+        <p>These Terms do not transfer any intellectual property rights to you. Your use of the App does not grant you any rights beyond the limited license in Section 2.</p>
+
+        <h3>Exercise Content Attribution</h3>
+        <p>Exercise data and demonstration images in the App are derived from the open <a href="https://github.com/yuhonas/free-exercise-db" target="_blank" rel="noopener">free-exercise-db</a> dataset, released under The Unlicense (public domain). Program structure and general activity guidance draw on published public-health recommendations, including those of the World Health Organization. Those sources do not endorse this App.</p>
+
+        <h3>Your Data</h3>
+        <p>Your workout history, progress and profile data belong to you. We make no claim of ownership over data you create, and we do not have access to it.</p>
+    </div>
+
+    <!-- ── 9. Third-Party Services ────────────────────────────────── -->
+    <div class="section" id="thirdparty-terms">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔗</div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>The App integrates third-party services. Your use of these services through the App is also subject to their respective terms and policies:</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Service</th><th>Provider</th><th>Applicable Terms</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Google LLC</td>
+                        <td><a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google ToS</a> · <a href="https://support.google.com/admob/answer/48182" target="_blank" rel="noopener">AdMob Policies</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google User Messaging Platform</strong></td>
+                        <td>Google LLC</td>
+                        <td><a href="https://policies.google.com/terms" target="_blank" rel="noopener">Google ToS</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play Billing</strong></td>
+                        <td>Google LLC</td>
+                        <td><a href="https://play.google.com/intl/en/about/play-terms/" target="_blank" rel="noopener">Play Terms of Service</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>RevenueCat</strong></td>
+                        <td>RevenueCat, Inc.</td>
+                        <td><a href="https://www.revenuecat.com/terms/" target="_blank" rel="noopener">RevenueCat Terms</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>GitHub (content hosting)</strong></td>
+                        <td>GitHub, Inc.</td>
+                        <td><a href="https://docs.github.com/site-policy/github-terms/github-terms-of-service" target="_blank" rel="noopener">GitHub ToS</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>We are not responsible for the availability, accuracy, content, practices, or policies of any third-party service. Outages or changes to third-party services are beyond our control.</p>
+    </div>
+
+    <!-- ── 10. Termination ────────────────────────────────────────── -->
+    <div class="section" id="termination">
+        <div class="section-head">
+            <div class="section-icon icon-red">🔚</div>
+            <div><h2>Termination</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>These Terms are effective until terminated.</p>
+        <h3>Termination by You</h3>
+        <p>You may terminate these Terms at any time by uninstalling the App. Uninstalling deletes all locally stored data. Uninstalling does not automatically cancel a Google Play subscription — see Section 7.</p>
+        <h3>Termination by Us</h3>
+        <p>We may terminate or suspend your license immediately, without prior notice, if:</p>
+        <ul>
+            <li>You violate any provision of these Terms</li>
+            <li>We are required to do so by law or Google Play policy</li>
+            <li>We decide to discontinue the App</li>
+        </ul>
+        <p>Upon termination, the license granted in Section 2 automatically ends. Sections 5, 8, 11, 12 and 13 survive termination.</p>
+    </div>
+
+    <!-- ── 11. Limitation of Liability ───────────────────────────── -->
+    <div class="section" id="liability">
+        <div class="section-head">
+            <div class="section-icon icon-amber">⚖️</div>
+            <div><h2>Disclaimer of Warranties &amp; Limitation of Liability</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <h3>Disclaimer of Warranties</h3>
+        <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE EXPRESSLY DISCLAIM ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.</p>
+        <p>We do not warrant that:</p>
+        <ul>
+            <li>The App will be available, uninterrupted, or error-free</li>
+            <li>Any estimate, instruction, timer or plan the App provides is accurate or suitable for you personally</li>
+            <li>The App will be free of viruses or other harmful components</li>
+            <li>Third-party services (AdMob, Google Play Billing, RevenueCat, content hosting) will be continuously available</li>
+        </ul>
+
+        <h3>Limitation of Liability</h3>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE SHALL NOT BE LIABLE FOR:</p>
+        <ul>
+            <li>Any indirect, incidental, special, consequential, exemplary, or punitive damages</li>
+            <li>Loss of profits, data, goodwill, or any injury or health outcome arising from your use of the App or performance of any exercise it describes</li>
+            <li>Damages arising from third-party service failures, outages, or policy changes</li>
+            <li>Unauthorized access to your device or App data</li>
+            <li>Any damages exceeding INR 500 (five hundred rupees), to the extent permitted by law</li>
+        </ul>
+        <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so the above limitations may not fully apply to you. Nothing in these Terms excludes or limits our liability for death or personal injury caused by our negligence, for fraud, or for any liability that cannot lawfully be excluded.</p>
+
+        <h3>Indemnification</h3>
+        <p>You agree to indemnify, defend, and hold harmless Varshaben Mukeshbhai Thummar from any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or in connection with your use or misuse of the App, your breach of these Terms, or your violation of any applicable law or third-party right.</p>
+    </div>
+
+    <!-- ── 12. Governing Law ───────────────────────────────────────── -->
+    <div class="section" id="governing">
+        <div class="section-head">
+            <div class="section-icon icon-blue">🏛️</div>
+            <div><h2>Governing Law &amp; Dispute Resolution</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>These Terms are governed by and construed in accordance with the laws of the <strong>Republic of India</strong>, without regard to its conflict-of-law provisions.</p>
+        <p>Any dispute, claim, or controversy arising out of or relating to these Terms or your use of the App shall be subject to the exclusive jurisdiction of the competent courts of India.</p>
+        <p>Before starting formal legal proceedings, please contact us first at <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a> — most issues are resolved far faster that way.</p>
+        <p>If you are a consumer resident in another country, this does not deprive you of the protection of mandatory consumer-law provisions of your country of residence.</p>
+    </div>
+
+    <!-- ── 13. Google Play Compliance ─────────────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-green">▶️</div>
+            <div><h2>Google Play Compliance</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>This App is distributed via the Google Play Store and complies with <a href="https://play.google.com/about/developer-content-policy/" target="_blank" rel="noopener">Google Play Developer Program Policies</a>, including:</p>
+        <ul>
+            <li><strong>Health Content and Services Policy:</strong> the App carries the fitness disclaimer in Section 5 and does not make medical or guaranteed-outcome claims</li>
+            <li><strong>Ads Policy:</strong> advertising is implemented using Google AdMob in compliance with Google's advertising policies; rewarded ads are always opt-in</li>
+            <li><strong>Families Policy:</strong> the App targets adults 18 and over and is not directed at children</li>
+            <li><strong>User Data Policy:</strong> you can export, restore, or erase all of your data from within the App at any time</li>
+        </ul>
+        <div class="callout callout-green">
+            The App also complies with <strong>Google Play Data Safety</strong> requirements. The Data Safety form submitted to Google Play reflects the data collection and sharing practices described in our <a href="privacy-policy.html">Privacy Policy</a>.
+        </div>
+    </div>
+
+    <!-- ── 14. Changes to Terms ───────────────────────────────────── -->
+    <div class="section" id="changes-terms">
+        <div class="section-head">
+            <div class="section-icon icon-teal">🔄</div>
+            <div><h2>Changes to These Terms</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>We may revise these Terms at any time. When we make material changes, we will update the "Last Updated" date at the top of this page. For significant changes, we may also provide an in-app notification.</p>
+        <p><strong>Your continued use of the App after the revised Terms take effect means you accept the changes.</strong> If you do not agree, you must stop using the App and uninstall it.</p>
+    </div>
+
+    <!-- ── 15. Contact ────────────────────────────────────────────── -->
+    <div class="section" id="contact-terms">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact</h2><div class="section-num">Section 15</div></div>
+        </div>
+        <p>For questions about these Terms, or to report a policy concern:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a></li>
+            <li><strong>Developer:</strong> Varshaben Mukeshbhai Thummar</li>
+            <li><strong>Location:</strong> India</li>
+            <li><strong>App:</strong> Home Workout Without Equipment (<code>com.jaystudio.home.workout.noeqipment</code>)</li>
+        </ul>
+        <div class="callout callout-blue">
+            By using the App, you acknowledge that you have read these Terms of Use and our Privacy Policy, and agree to be bound by both.
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>Home Workout Without Equipment</strong><br>
+    © 2026 Varshaben Mukeshbhai Thummar · India<br>
+    <a href="mailto:auralinkinfotech@gmail.com">auralinkinfotech@gmail.com</a>
+</footer>
+
+</body>
+</html>

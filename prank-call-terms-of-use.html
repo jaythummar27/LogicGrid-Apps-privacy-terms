@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Prank Call</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+
+        /* ── Header ─────────────────────────────────── */
+        .site-header {
+            background: linear-gradient(135deg, #0B1628 0%, #1E3A8A 55%, #1D4ED8 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(99,102,241,.2) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 70%, rgba(14,165,233,.15) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon { font-size: 52px; display: block; margin-bottom: 16px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.25)); }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .75; margin-bottom: 20px; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+        .badge { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; backdrop-filter: blur(4px); }
+
+        /* ── Layout ─────────────────────────────────── */
+        .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+
+        /* ── Nav strip ──────────────────────────────── */
+        .toc-strip {
+            background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow);
+            padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2;
+        }
+        .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+        .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+        .toc-links a { font-size: .82rem; color: var(--accent); text-decoration: none; background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; transition: background .15s, color .15s; }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        /* ── Section Cards ──────────────────────────── */
+        .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
+        .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+        .icon-indigo { background: #E0E7FF; }
+
+        h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code { font-family: 'SF Mono', 'Fira Code', monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 420px; }
+        thead tr { background: var(--surface); }
+        th { text-align: left; padding: 11px 14px; font-weight: 600; color: var(--ink); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+
+        .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">📞</span>
+    <h1>Prank Call</h1>
+    <div class="doc-type">Terms of Use</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: September 15, 2026</span>
+        <span class="badge">⚖️ Governed by Indian Law</span>
+        <span class="badge">🎭 Entertainment Simulation Only</span>
+        <span class="badge">✅ Google Play Developer Policy Compliant</span>
+        <span class="badge">📱 AdMob Policy Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#acceptance">Acceptance</a>
+            <a href="#license">License</a>
+            <a href="#nature">Simulation Nature</a>
+            <a href="#permitted">Permitted Use</a>
+            <a href="#prohibited">Prohibited Conduct</a>
+            <a href="#diy-terms">Custom DIY Media</a>
+            <a href="#celebrity">Parody Disclaimer</a>
+            <a href="#ads-terms">Advertising</a>
+            <a href="#disclaimer">Disclaimers</a>
+            <a href="#ip">Intellectual Property</a>
+            <a href="#termination">Termination</a>
+            <a href="#liability">Liability</a>
+            <a href="#governing">Governing Law</a>
+            <a href="#changes">Changes</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- ── 1. Acceptance ─────────────────────────────────────────── -->
+    <div class="section" id="acceptance">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✅</div>
+            <div><h2>Acceptance of Terms</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>These Terms of Use ("Terms") constitute a legally binding agreement between you ("User" or "you") and <strong>LogicGridApps</strong>, operated by <strong>Mukesh Thummar</strong>, Gujarat, India ("we," "us," "our"), governing your access to and use of <strong>Prank Call</strong> (the "App"), package <code>com.jaystudio.prank.call</code>.</p>
+        <div class="callout callout-blue">
+            <strong>By downloading, installing, or using the App, you confirm that you:</strong><br>
+            (a) have read and understood these Terms;<br>
+            (b) are at least 13 years old (or of legal age in your jurisdiction);<br>
+            (c) agree to be bound by these Terms and our Privacy Policy.<br><br>
+            If you do not agree to these Terms, you must immediately uninstall and cease using the App.
+        </div>
+        <p>These Terms apply to all versions of the App, including all updates, upgrades, and additional features released under this application package on the Google Play Store.</p>
+    </div>
+
+    <!-- ── 2. License ────────────────────────────────────────────── -->
+    <div class="section" id="license">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">📜</div>
+            <div><h2>Limited License</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>We grant you a personal, revocable, non-transferable, non-sublicensable, non-exclusive, and limited license to download, install, and run the App on your mobile device solely for your personal, non-commercial entertainment purposes.</p>
+        <p>This license does not permit you to copy, modify, distribute, sell, rent, sublicense, reverse-engineer, decompile, or extract the source code or media assets of the App or its constituent libraries.</p>
+    </div>
+
+    <!-- ── 3. Nature of Service: Prank & Entertainment Simulation ─── -->
+    <div class="section" id="nature">
+        <div class="section-head">
+            <div class="section-icon icon-amber">🎭</div>
+            <div><h2>Nature of Service: Simulation &amp; Entertainment Only</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <div class="callout callout-amber">
+            <strong>CRITICAL NOTICE:</strong> <strong>Prank Call</strong> is exclusively a novelty entertainment simulator.
+        </div>
+        <ul>
+            <li><strong>No Real Calling Capability:</strong> The App does NOT place real phone calls, send real cellular SMS messages, or connect to telecommunications carrier networks. All calls, chats, ringing tones, and video screens are simulated digital animations.</li>
+            <li><strong>NO EMERGENCY USE:</strong> The App CANNOT be used to dial emergency services (e.g. 911, 112, 999, 100, ambulance, fire, or police services). In an emergency, always use your device's native system dialer or standard telephone service.</li>
+            <li><strong>Harmless Fun:</strong> The App is built strictly for harmless laughs, lighthearted fun, and playful jokes with friends, family, and consenting parties.</li>
+        </ul>
+    </div>
+
+    <!-- ── 4. Permitted Use ──────────────────────────────────────── -->
+    <div class="section" id="permitted">
+        <div class="section-head">
+            <div class="section-icon icon-green">👍</div>
+            <div><h2>Permitted Use</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <p>You agree to use the App only in accordance with:</p>
+        <ul>
+            <li>These Terms of Use</li>
+            <li>Google Play Store Terms of Service and Developer Content Policies</li>
+            <li>All applicable local, state, national, and international laws, regulations, and privacy standards</li>
+        </ul>
+        <p>You are solely responsible for ensuring that your use of the simulated calls or pranks does not cause distress, alarm, physical harm, or financial loss to any third party.</p>
+    </div>
+
+    <!-- ── 5. Prohibited Conduct & Misuse ────────────────────────── -->
+    <div class="section" id="prohibited">
+        <div class="section-head">
+            <div class="section-icon icon-red">🚫</div>
+            <div><h2>Prohibited Conduct &amp; Zero Tolerance Misuse</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>You must NOT use the App under any circumstances to:</p>
+        <div class="callout callout-red">
+            <strong>Zero Tolerance Abuse Policy:</strong> Any malicious, unlawful, fraudulent, or abusive use of this App is strictly prohibited.
+        </div>
+        <ul>
+            <li><strong>Harassment &amp; Bullying:</strong> Harass, bully, threaten, stalk, intimidate, abuse, or demean any person.</li>
+            <li><strong>Fraud &amp; Extortion:</strong> Defraud, extort, impersonate bank officials, government agents, police officers, or emergency personnel, or deceive individuals for financial or malicious gain.</li>
+            <li><strong>Unlawful Impersonation:</strong> Impersonate real individuals without their consent with the intent to harm reputation, commit identity theft, or cause legal injury.</li>
+            <li><strong>Emergency Hoaxes:</strong> Fake medical emergencies, terror threats, fires, or serious distress scenarios.</li>
+            <li><strong>Malicious Modification:</strong> Attempt to inject malicious scripts, exploit vulnerabilities, or circumvent digital rights controls.</li>
+        </ul>
+        <p>LogicGridApps reserves the right to cooperate fully with law enforcement authorities in the investigation of any suspected unlawful conduct.</p>
+    </div>
+
+    <!-- ── 6. User-Generated Content & DIY Caller Responsibilities ─ -->
+    <div class="section" id="diy-terms">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🎨</div>
+            <div><h2>User-Generated Content &amp; Custom DIY Callers</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>The App provides a "DIY Caller" feature allowing you to import custom images, video clips, and audio tracks from your device to create personalized prank callers.</p>
+        <ul>
+            <li><strong>Ownership &amp; Rights:</strong> You retain ownership of any media files you select. You warrant that you have all necessary rights, permissions, or licenses to use any images, videos, or audio you import.</li>
+            <li><strong>Prohibited Uploads / Selections:</strong> You agree NOT to use photos, videos, or audio that are defamatory, obscene, pornographic, hateful, infringing upon third-party copyrights/trademarks, or depicting individuals without their explicit consent.</li>
+            <li><strong>Local Responsibility:</strong> Because all DIY Caller configurations are stored exclusively on your local device and never transmitted to our servers, you are solely and entirely responsible for any content configured in your local app installation.</li>
+        </ul>
+    </div>
+
+    <!-- ── 7. Celebrity Likeness & Parody Disclaimer ─────────────── -->
+    <div class="section" id="celebrity">
+        <div class="section-head">
+            <div class="section-icon icon-teal">⭐</div>
+            <div><h2>Parody, Satire &amp; Non-Affiliation Disclaimer</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <div class="callout callout-blue">
+            <strong>Fair Use &amp; Parody:</strong> All celebrity characters, idols, animated figures, or humorous personas referenced, depicted, or simulated within the App are for <strong>parody, satire, and entertainment purposes only</strong>.
+        </div>
+        <p>All trademarks, logos, character names, and artistic likenesses referenced in the App remain the property of their respective trademark and copyright owners. The App is NOT affiliated with, sponsored by, authorized by, or endorsed by any depicted celebrity, artist, singer, influencer, movie studio, or entertainment company.</p>
+    </div>
+
+    <!-- ── 8. Advertising ────────────────────────────────────────── -->
+    <div class="section" id="ads-terms">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising &amp; Commercial Content</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App displays advertisements powered by Google AdMob. Ads help fund the ongoing maintenance and development of the App. By using the App, you consent to the display of banners, native cards, interstitial ads, and optional rewarded video offers.</p>
+        <p>We do not endorse and are not liable for the content, quality, accuracy, claims, or services advertised in any third-party ads appearing within the App.</p>
+    </div>
+
+    <!-- ── 9. Disclaimer of Warranties ───────────────────────────── -->
+    <div class="section" id="disclaimer">
+        <div class="section-head">
+            <div class="section-icon icon-slate">⚠️</div>
+            <div><h2>Disclaimer of Warranties</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>THE APP IS PROVIDED ON AN <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, TIMELINESS, OR NON-INFRINGEMENT.</p>
+        <p>WE DO NOT GUARANTEE THAT THE APP WILL BE ERROR-FREE, UNINTERRUPTED, SECURE, OR FREE FROM BUGS OR GLITCHES, NOR DO WE WARRANT THAT ANY SIMULATION WILL SATISFY YOUR SPECIFIC EXPECTATIONS.</p>
+    </div>
+
+    <!-- ── 10. Intellectual Property ─────────────────────────────── -->
+    <div class="section" id="ip">
+        <div class="section-head">
+            <div class="section-icon icon-blue">💡</div>
+            <div><h2>Intellectual Property</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>All application code, UI designs, animations, sound effects, layout architecture, graphics, and compilation rights belong exclusively to <strong>LogicGridApps</strong> and <strong>Mukesh Thummar</strong>. You do not acquire any ownership rights or intellectual property rights by installing or using the App.</p>
+    </div>
+
+    <!-- ── 11. Termination ───────────────────────────────────────── -->
+    <div class="section" id="termination">
+        <div class="section-head">
+            <div class="section-icon icon-red">🛑</div>
+            <div><h2>Termination</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p>We reserve the right, without prior notice and at our sole discretion, to terminate or suspend your license to use the App, or block your access, if you breach any provision of these Terms or engage in conduct harmful to other users or our brand.</p>
+        <p>You may terminate your agreement with these Terms at any time by simply uninstalling and deleting all copies of the App from your devices.</p>
+    </div>
+
+    <!-- ── 12. Limitation of Liability ───────────────────────────── -->
+    <div class="section" id="liability">
+        <div class="section-head">
+            <div class="section-icon icon-purple">💥</div>
+            <div><h2>Limitation of Liability</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL <strong>LOGICGRIDAPPS</strong>, <strong>MUKESH THUMMAR</strong>, OR ITS AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, DATA LOSS, DEVICE DAMAGE, EMOTIONAL DISTRESS, OR THIRD-PARTY CLAIMS) ARISING OUT OF OR IN CONNECTION WITH YOUR USE, MISUSE, OR INABILITY TO USE THE APP, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <p>IN ALL EVENTS, OUR TOTAL AGGREGATE LIABILITY SHALL NOT EXCEED THE GREATER OF THE AMOUNT YOU PAID DIRECTLY TO US FOR THE APP (IF ANY) OR ONE HUNDRED INDIAN RUPEES (INR 100).</p>
+    </div>
+
+    <!-- ── 13. Governing Law & Dispute Resolution ────────────────── -->
+    <div class="section" id="governing">
+        <div class="section-head">
+            <div class="section-icon icon-teal">⚖️</div>
+            <div><h2>Governing Law &amp; Jurisdiction</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>These Terms and any dispute or claim arising out of or related to them shall be governed by and construed in accordance with the substantive laws of <strong>India</strong>, without giving effect to any principles of conflicts of law.</p>
+        <p>You irrevocably consent and submit to the exclusive personal jurisdiction and venue of the competent courts located in <strong>Gujarat, India</strong> for the resolution of all disputes arising under or relating to these Terms.</p>
+    </div>
+
+    <!-- ── 14. Changes to These Terms ────────────────────────────── -->
+    <div class="section" id="changes">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔄</div>
+            <div><h2>Changes to These Terms</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>We reserve the right to revise or update these Terms at any time. When we make updates, we will update the "Last Updated" date at the top of this document.</p>
+        <p>Your continued access to or use of the App following the posting of revised Terms constitutes your full acceptance of and agreement to the updated Terms.</p>
+    </div>
+
+    <!-- ── 15. Contact Information ────────────────────────────────── -->
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact Information</h2><div class="section-num">Section 15</div></div>
+        </div>
+        <p>For questions, support, or notices regarding these Terms of Use, please contact:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a></li>
+            <li><strong>Developer:</strong> Mukesh Thummar</li>
+            <li><strong>Company:</strong> LogicGridApps</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer">
+    <strong>Prank Call</strong><br>
+    © 2026 LogicGridApps · Mukesh Thummar · Gujarat, India<br>
+    <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>
+</footer>
+
+</body>
+</html>

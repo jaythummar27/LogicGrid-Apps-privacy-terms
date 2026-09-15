@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Prank Call</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+
+        /* ── Header ─────────────────────────────────── */
+        .site-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, var(--sky) 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 70% 30%, rgba(59,130,246,.25) 0%, transparent 60%),
+                        radial-gradient(ellipse at 20% 80%, rgba(14,165,233,.18) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon {
+            font-size: 52px;
+            display: block;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,.25));
+        }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type {
+            font-size: .9rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: .75;
+            margin-bottom: 20px;
+        }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .badge {
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: .78rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        /* ── Layout ─────────────────────────────────── */
+        .page-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ── Nav strip ──────────────────────────────── */
+        .toc-strip {
+            background: var(--white);
+            border-radius: 14px;
+            box-shadow: var(--card-shadow);
+            padding: 20px 24px;
+            margin: -28px 0 32px;
+            position: relative;
+            z-index: 2;
+        }
+        .toc-strip p {
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .toc-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .toc-links a {
+            font-size: .82rem;
+            color: var(--accent);
+            text-decoration: none;
+            background: var(--surface);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-weight: 500;
+            transition: background .15s, color .15s;
+        }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        /* ── Section Cards ──────────────────────────── */
+        .section {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            padding: 32px;
+            margin-bottom: 24px;
+            scroll-margin-top: 24px;
+        }
+        .section-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1.5px solid var(--surface);
+        }
+        .section-icon {
+            width: 42px; height: 42px;
+            border-radius: 11px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--ink);
+            letter-spacing: -.3px;
+        }
+        .section-num {
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 1px;
+        }
+
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+
+        strong { font-weight: 600; color: var(--ink); }
+        code {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: var(--surface);
+            border-radius: 4px;
+            padding: 1px 6px;
+            font-size: .85em;
+            color: var(--accent);
+            border: 1px solid var(--border);
+        }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        /* ── Callout boxes ──────────────────────────── */
+        .callout {
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 16px 0;
+            font-size: .93rem;
+            line-height: 1.65;
+        }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+
+        /* ── Tables ─────────────────────────────────── */
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+        thead tr { background: var(--surface); }
+        th {
+            text-align: left;
+            padding: 11px 14px;
+            font-weight: 600;
+            color: var(--ink);
+            font-size: .82rem;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            border-bottom: 1px solid var(--border);
+        }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+        .tick { color: var(--green); font-weight: 700; }
+        .cross { color: var(--red); font-weight: 700; }
+
+        /* ── Pill list ──────────────────────────────── */
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+        .pill {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: .82rem;
+            font-weight: 500;
+            color: var(--ink);
+        }
+        .pill-green { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+        .pill-red   { background: #FEE2E2; border-color: #FCA5A5; color: #991B1B; }
+        .pill-blue  { background: #DBEAFE; border-color: #93C5FD; color: #1D4ED8; }
+        .pill-purple{ background: #EDE9FE; border-color: #C4B5FD; color: #5B21B6; }
+
+        /* ── Divider ────────────────────────────────── */
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+
+        /* ── Ad section special styling ─────────────── */
+        .ad-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .ad-type-card {
+            background: var(--surface);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+        }
+        .ad-type-card strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: .9rem; }
+        .ad-type-card span { font-size: .83rem; color: var(--muted); line-height: 1.5; }
+
+        /* ── Footer ─────────────────────────────────── */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,.65);
+            text-align: center;
+            padding: 28px 20px;
+            font-size: .85rem;
+            line-height: 1.8;
+        }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
+<header class="site-header">
+    <span class="header-icon">📞</span>
+    <h1>Prank Call</h1>
+    <div class="doc-type">Privacy Policy</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: September 15, 2026</span>
+        <span class="badge">📋 Effective: September 15, 2026</span>
+        <span class="badge">📦 Package: com.jaystudio.prank.call</span>
+        <span class="badge">🎭 Entertainment Simulation</span>
+        <span class="badge">🌐 GDPR-Aware</span>
+        <span class="badge">✅ Google Play Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#intro">Introduction</a>
+            <a href="#simulation">Simulation Nature</a>
+            <a href="#collect">Data We Collect</a>
+            <a href="#camera">Camera &amp; Audio</a>
+            <a href="#permissions">App Permissions</a>
+            <a href="#diy">Custom DIY Media</a>
+            <a href="#ads">Advertising</a>
+            <a href="#thirdparty">Third-Party SDKs</a>
+            <a href="#storage">Storage &amp; Security</a>
+            <a href="#rights">Your Rights</a>
+            <a href="#children">Children</a>
+            <a href="#changes">Changes</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- ── 1. Introduction ───────────────────────────────────────── -->
+    <div class="section" id="intro">
+        <div class="section-head">
+            <div class="section-icon icon-blue">📖</div>
+            <div><h2>Introduction</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>Welcome to <strong>Prank Call</strong> (the "App"), package <code>com.jaystudio.prank.call</code>, developed and operated by <strong>LogicGridApps</strong> ("we," "us," "our"), operated by <strong>Mukesh Thummar</strong> and located in Gujarat, India.</p>
+        <p>This Privacy Policy explains how our App handles device access, user privacy, and data when you use our simulated calling and entertainment features. We are committed to transparency and upholding your fundamental privacy rights.</p>
+        <div class="callout callout-blue">
+            By downloading, installing, or using the App, you acknowledge that you have read, understood, and agreed to this Privacy Policy. If you do not agree, please uninstall and discontinue use of the App immediately.
+        </div>
+    </div>
+
+    <!-- ── 2. Nature of the App (Simulation Disclaimer) ──────────── -->
+    <div class="section" id="simulation">
+        <div class="section-head">
+            <div class="section-icon icon-amber">🎭</div>
+            <div><h2>Simulation &amp; Entertainment Nature</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <div class="callout callout-amber">
+            <strong>Important Notice:</strong> <strong>Prank Call</strong> is strictly an entertainment and simulation application designed for harmless amusement, jokes, and parodies among friends and family.
+        </div>
+        <ul>
+            <li>The App <strong>does not make real cellular or VoIP telephone calls</strong> and does not send real SMS messages.</li>
+            <li>All incoming audio calls, video calls, messages, and celebrity interactions displayed in the App are completely pre-recorded, pre-scripted simulations.</li>
+            <li>The App cannot and must never be used to connect to emergency services (including 911, 112, 999, or local emergency hotlines).</li>
+            <li>No real connection is made to any public figures, artists, celebrities, or other third parties depicted in the application.</li>
+        </ul>
+    </div>
+
+    <!-- ── 3. Information We Collect ─────────────────────────────── -->
+    <div class="section" id="collect">
+        <div class="section-head">
+            <div class="section-icon icon-teal">📊</div>
+            <div><h2>Information We Collect</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <p>We respect your privacy by adhering to a strict data minimization philosophy. We do not operate remote user account servers, and core features function completely offline on your device.</p>
+
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">3.1 Data You Provide Locally</h3>
+        <ul>
+            <li><strong>Custom DIY Caller Info:</strong> Names, phone numbers, custom audio, photos, or video files you optionally choose to import for personalized custom prank callers. This information stays strictly inside your local device storage.</li>
+            <li><strong>Celebrity Wish Input:</strong> Recipient names or occasion selections (such as Birthday or Anniversary) typed when generating custom greeting calls. These strings are processed locally to customize the on-screen display.</li>
+        </ul>
+
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">3.2 Automatically Collected Data (Third-Party Services)</h3>
+        <ul>
+            <li><strong>Device Information:</strong> Device model, operating system version, screen resolution, and system language (processed by Google Play Services and AdMob).</li>
+            <li><strong>Advertising Identifiers:</strong> Google Advertising ID (GAID) collected securely by Google AdMob to serve relevant ads (detailed in Section 7).</li>
+            <li><strong>App Performance &amp; Diagnostics:</strong> Anonymous crash logs and diagnostic metrics provided via standard Android OS error reports.</li>
+        </ul>
+
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">3.3 Information We NEVER Collect</h3>
+        <div class="callout callout-green">
+            <strong>Zero Account &amp; Zero Cloud Media:</strong> LogicGridApps does NOT collect or require your real name, email address, physical address, financial credentials, contact address book, or telephone number. We do NOT operate remote cloud storage for user photos, voice recordings, or videos.
+        </div>
+    </div>
+
+    <!-- ── 4. Camera & Audio Transparency ────────────────────────── -->
+    <div class="section" id="camera">
+        <div class="section-head">
+            <div class="section-icon icon-purple">📷</div>
+            <div><h2>Camera &amp; Audio Processing Transparency</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <p>During simulated video calls, the App offers an authentic experience by displaying a small front-camera Picture-in-Picture (PiP) self-preview in the corner of your screen.</p>
+        
+        <div class="callout callout-blue">
+            <strong>Real-Time In-Memory Camera Preview Only:</strong> When you grant camera permission, your front camera is accessed via Google's official Android <code>CameraX</code> API exclusively to draw a real-time self-view on your display. 
+            <br><br>
+            <strong>Key Safeguards:</strong>
+            <br>• Camera frames are <strong>never recorded</strong>, captured, encoded, or saved to device storage.
+            <br>• Camera frames are <strong>never transmitted</strong> over the internet, streamed to external servers, or shared with third parties.
+            <br>• The camera hardware is optional (<code>android.hardware.camera required="false"</code>); you may decline camera permission and still use all audio and video call simulations.
+        </div>
+
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Audio Management</h3>
+        <p>The <code>MODIFY_AUDIO_SETTINGS</code> permission is used purely by Android's audio system to toggle sound between the loudspeaker and earpiece during call simulation, and to control the simulated ringtone and voice track volume. The App does NOT record your microphone audio during calls or upload audio recordings.</p>
+    </div>
+
+    <!-- ── 5. Permissions Summary ─────────────────────────────────── -->
+    <div class="section" id="permissions">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🔑</div>
+            <div><h2>Android Device Permissions</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>In full compliance with Google Play Developer Policies, below is the complete enumeration of device permissions requested by <strong>Prank Call</strong> and their explicit purposes:</p>
+        
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Specific Purpose in App</th>
+                        <th>Required / Optional</th>
+                        <th>Data Leaves Device?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>android.permission.CAMERA</code></td>
+                        <td>Displays live front-camera Picture-in-Picture (PiP) reaction preview during video calls.</td>
+                        <td>Optional</td>
+                        <td><span class="cross">✘ Never (Live display only)</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>android.permission.MODIFY_AUDIO_SETTINGS</code></td>
+                        <td>Switches audio routing between speaker and earpiece, adjusts simulated ring volume.</td>
+                        <td>System level</td>
+                        <td><span class="cross">✘ Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>android.permission.VIBRATE</code></td>
+                        <td>Triggers realistic haptic vibration rhythms during incoming call ringing simulation.</td>
+                        <td>Standard</td>
+                        <td><span class="cross">✘ Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>android.permission.WAKE_LOCK</code></td>
+                        <td>Prevents the screen from sleeping during incoming call rings and ongoing prank calls.</td>
+                        <td>Standard</td>
+                        <td><span class="cross">✘ Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>android.permission.POST_NOTIFICATIONS</code></td>
+                        <td>Delivers scheduled incoming call alarms and prank countdown notifications (Android 13+).</td>
+                        <td>Optional</td>
+                        <td><span class="cross">✘ Never</span></td>
+                    </tr>
+                    <tr>
+                        <td><code>READ_MEDIA_IMAGES</code><br><code>READ_MEDIA_VIDEO</code><br><code>READ_EXTERNAL_STORAGE</code></td>
+                        <td>Allows users to pick custom images, videos, or ringtones from their gallery for the DIY Custom Caller feature.</td>
+                        <td>Optional (DIY caller only)</td>
+                        <td><span class="cross">✘ Never (Local storage only)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>You may grant, deny, or revoke any optional permission at any time in your device settings: <strong>Settings → Apps → Prank Call → Permissions</strong>.</p>
+    </div>
+
+    <!-- ── 6. Custom DIY Media ────────────────────────────────────── -->
+    <div class="section" id="diy">
+        <div class="section-head">
+            <div class="section-icon icon-green">🎨</div>
+            <div><h2>Custom DIY Caller Media Handling</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>Our DIY (Do It Yourself) Caller feature empowers you to create custom prank profiles using your own media (e.g. funny character photos, short video clips, or custom voice recordings).</p>
+        <div class="callout callout-green">
+            <strong>Local Sandbox Guarantee:</strong> Any media file you select from your gallery remains stored securely in your private application storage sandbox. We never upload, inspect, index, or transmit your chosen media to any server or cloud infrastructure. Deleting the custom caller or uninstalling the App permanently removes all associated local profile configurations.
+        </div>
+    </div>
+
+    <!-- ── 7. Advertising ─────────────────────────────────────────── -->
+    <div class="section" id="ads">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising — Google AdMob</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <p>To keep the App free to enjoy, we display non-disruptive advertisements provided by <strong>Google AdMob</strong>. AdMob may collect and process pseudonymous device data to deliver ads.</p>
+
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Ad Formats</h3>
+        <div class="ad-types">
+            <div class="ad-type-card">
+                <strong>⚡ Native &amp; Banner Ads</strong>
+                <span>Contextual banners displayed tastefully within selection menus and caller lists.</span>
+            </div>
+            <div class="ad-type-card">
+                <strong>🎬 Interstitial &amp; Rewarded Ads</strong>
+                <span>Full-screen announcements or optional rewarded videos presented when unlocking special VIP characters or features.</span>
+            </div>
+        </div>
+
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Data Processed by AdMob</h3>
+        <p>Google AdMob may collect:</p>
+        <ul>
+            <li>Google Advertising Identifier (GAID / Ad ID)</li>
+            <li>Device hardware details, screen resolution, operating system, and system language</li>
+            <li>Coarse network location derived from IP address</li>
+            <li>Ad engagement metrics (views, impressions, clicks)</li>
+        </ul>
+        <p>This data is processed directly by Google LLC under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+        <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">Opting Out of Personalized Ads</h3>
+        <p>You can reset your Advertising ID or opt out of personalized ad tracking anytime:</p>
+        <ul>
+            <li>Android Settings: <strong>Settings → Google → Ads → Delete Advertising ID</strong> or <strong>Opt out of Ads Personalization</strong>.</li>
+        </ul>
+    </div>
+
+    <!-- ── 8. Third-Party SDKs ─────────────────────────────────────── -->
+    <div class="section" id="thirdparty">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔗</div>
+            <div><h2>Third-Party SDKs &amp; Libraries</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App integrates high-performance, industry-standard Android libraries. Here is a summary of all integrated components:</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Library / SDK</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Network Transmission?</th>
+                        <th>Privacy Policy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Google LLC</td>
+                        <td>In-app advertising</td>
+                        <td><span class="tick">✔ Ad ID, device metrics</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play In-App Billing</strong></td>
+                        <td>Google LLC</td>
+                        <td>Secure premium purchases (if applicable)</td>
+                        <td><span class="tick">✔ Purchase tokens</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>AndroidX Media3 / ExoPlayer</strong></td>
+                        <td>Google / Android Open Source</td>
+                        <td>Video &amp; audio simulation playback</td>
+                        <td><span class="cross">✘ None (Local playback only)</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>AndroidX CameraX</strong></td>
+                        <td>Google / Android Open Source</td>
+                        <td>Local front-camera PiP preview</td>
+                        <td><span class="cross">✘ None (Local preview only)</span></td>
+                        <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Coil Compose</strong></td>
+                        <td>Coil Open Source Project</td>
+                        <td>Local avatar and thumbnail rendering</td>
+                        <td><span class="cross">✘ None (Local assets)</span></td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ── 9. Storage & Security ──────────────────────────────────── -->
+    <div class="section" id="storage">
+        <div class="section-head">
+            <div class="section-icon icon-green">🔒</div>
+            <div><h2>Data Storage &amp; Security</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>We implement rigorous security practices to protect any local application data:</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Category</th>
+                        <th>Where Stored</th>
+                        <th>External Transmission?</th>
+                        <th>Retention Period</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Custom Caller Profiles &amp; Avatars</td>
+                        <td>Private App Internal Storage</td>
+                        <td><span class="cross">✘ None</span></td>
+                        <td>Until edited, deleted, or App uninstalled</td>
+                    </tr>
+                    <tr>
+                        <td>App Settings &amp; Preferences</td>
+                        <td>Device SharedPreferences</td>
+                        <td><span class="cross">✘ None</span></td>
+                        <td>Until cleared or App uninstalled</td>
+                    </tr>
+                    <tr>
+                        <td>Temporary Camera Preview Frames</td>
+                        <td>Hardware RAM (Volatile Memory)</td>
+                        <td><span class="cross">✘ None</span></td>
+                        <td>Destroyed immediately after frame display</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul>
+            <li>All app interactions execute within Android's sandboxed environment, preventing other applications from accessing private data.</li>
+            <li>Ad and billing network traffic utilizes strict industry-standard HTTPS/TLS encryption in transit.</li>
+        </ul>
+    </div>
+
+    <!-- ── 10. Your Rights & Controls ─────────────────────────────── -->
+    <div class="section" id="rights">
+        <div class="section-head">
+            <div class="section-icon icon-blue">⚖️</div>
+            <div><h2>Your Rights &amp; User Controls</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>You maintain full control over your device data and privacy preferences:</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Control / Right</th>
+                        <th>How to Exercise It</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Revoke Camera Access</strong></td>
+                        <td>Android Settings → Apps → Prank Call → Permissions → Camera → "Don't allow"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Revoke Storage Access</strong></td>
+                        <td>Android Settings → Apps → Prank Call → Permissions → Photos and videos → "Don't allow"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Delete Custom Callers</strong></td>
+                        <td>Open DIY Caller in the App and delete any created custom prank profiles</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clear App Data</strong></td>
+                        <td>Android Settings → Apps → Prank Call → Storage → "Clear Data"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Opt Out of Ad Tracking</strong></td>
+                        <td>Android Settings → Google → Ads → "Delete Advertising ID"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ── 11. Children's Privacy ─────────────────────────────────── -->
+    <div class="section" id="children">
+        <div class="section-head">
+            <div class="section-icon icon-red">👶</div>
+            <div><h2>Children's Privacy</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p><strong>Prank Call</strong> is intended for general audiences aged <strong>13 and above</strong>. We do not knowingly collect, request, or solicit personal information from children under 13.</p>
+        <p>If you are a parent or guardian and believe that a child under 13 has provided personal information to us, please contact us immediately at <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>, and we will promptly investigate and ensure such information is removed.</p>
+    </div>
+
+    <!-- ── 12. Policy Changes ──────────────────────────────────────── -->
+    <div class="section" id="changes">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔄</div>
+            <div><h2>Changes to This Privacy Policy</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>We may update this Privacy Policy from time to time to reflect modifications in our features, technological enhancements, or regulatory requirements. We will indicate revisions by updating the "Last Updated" date at the top of this document.</p>
+        <p>Your continued use of the App following the posting of changes constitutes your acceptance of the updated Privacy Policy.</p>
+    </div>
+
+    <!-- ── 13. Contact Information ────────────────────────────────── -->
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact Us</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>If you have questions, feedback, or concerns regarding this Privacy Policy or our data practices, please reach out to us:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a></li>
+            <li><strong>Developer:</strong> Mukesh Thummar</li>
+            <li><strong>Organization:</strong> LogicGridApps</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+        <div class="callout callout-blue">
+            We aim to address all privacy-related inquiries and correspondence within <strong>30 business days</strong>.
+        </div>
+    </div>
+
+</div>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="footer">
+    <strong>Prank Call</strong><br>
+    © 2026 LogicGridApps · Mukesh Thummar · Gujarat, India<br>
+    <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — AI Astrology: Palm &amp; Tarot</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #141A4A;
+            --blue:   #2E4196;
+            --accent: #34499C;
+            --gold:   #C8962A;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1C1F3A;
+            --body:   #363B5C;
+            --muted:  #6B7194;
+            --border: #D3D6E8;
+            --surface:#F2F3FA;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(46,65,150,.09);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; color: var(--body); background: #EEF0FA; min-height: 100vh; }
+
+        .site-header {
+            background: radial-gradient(120% 140% at 20% 0%, #3A55B8 0%, #22307E 45%, #0F0C3A 100%);
+            color: #fff; padding: 56px 24px 52px; text-align: center; position: relative; overflow: hidden;
+        }
+        .site-header::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background-image: radial-gradient(rgba(255,255,255,.55) 1px, transparent 1.2px);
+            background-size: 46px 46px; opacity: .35;
+        }
+        .site-header::after {
+            content: ''; position: absolute; width: 520px; height: 520px; right: -160px; top: -200px; pointer-events: none;
+            border-radius: 50%; border: 1px solid rgba(233,221,190,.35); box-shadow: 0 0 0 60px rgba(233,221,190,.06);
+        }
+        .logo-mark {
+            width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%; position: relative;
+            background: radial-gradient(circle at 40% 38%, #FFFBEA 0%, #FAD67A 45%, #D89A2E 100%);
+            box-shadow: 0 0 0 6px rgba(233,221,190,.25), 0 0 40px rgba(250,214,122,.55);
+        }
+        .site-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; letter-spacing: -.5px; margin-bottom: 6px; position: relative; }
+        .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .8; color: #F3D9A0; position: relative; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 18px; position: relative; }
+        .badge { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; }
+
+        .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+        .toc-strip { background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow); padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2; }
+        .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+        .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+        .toc-links a { font-size: .82rem; color: var(--accent); background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; text-decoration: none; }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
+        .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+            background: linear-gradient(135deg, #2E4196, #141A4A); color: #F3D9A0; font: 600 .85rem 'DM Sans', sans-serif; letter-spacing: .5px; }
+        h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code { font-family: 'SF Mono', 'Fira Code', Consolas, monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
+        .callout-blue  { background: #EEF1FB; border-left: 3px solid var(--accent); color: #23336F; }
+        .callout-green { background: #ECFDF5; border-left: 3px solid var(--green); color: #065F46; }
+        .callout-red   { background: #FFF1F2; border-left: 3px solid var(--red);   color: #9B1C1C; }
+        .callout-amber { background: #FFF8E8; border-left: 3px solid var(--gold);  color: #7A5212; }
+
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+        thead tr { background: var(--surface); }
+        th { text-align: left; padding: 11px 14px; font-weight: 600; color: var(--ink); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        .yes { color: var(--green); font-weight: 600; }
+        .no  { color: var(--red); font-weight: 600; }
+
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+        .pill { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: .82rem; font-weight: 500; color: var(--ink); }
+        .pill-red   { background: #FEE2E2; border-color: #FCA5A5; color: #991B1B; }
+        .pill-blue  { background: #E3E8F8; border-color: #AEB9E6; color: #23336F; }
+        .pill-green { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+
+        .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
+        .footer a { color: #F3D9A0; }
+        .footer strong { color: #fff; }
+        @media (max-width: 600px) { .section { padding: 20px 18px; } .site-header { padding: 40px 20px 36px; } }
+    </style>
+    <style>
+        .highlight-box { background: linear-gradient(135deg, #FFF8E8, #EEF1FB); border: 1px solid #E8D3A0; border-radius: 12px; padding: 20px 24px; margin: 16px 0; }
+        .highlight-box h3 { margin-top: 0; color: var(--navy); }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+        .col-box { background: var(--surface); border-radius: 10px; padding: 16px; border: 1px solid var(--border); }
+        .col-box h3 { color: var(--ink); margin-top: 0; font-size: .9rem; }
+        @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="logo-mark" aria-hidden="true"></div>
+    <h1>AI Astrology: Palm &amp; Tarot</h1>
+    <div class="doc-type">Terms of Use</div>
+    <div class="badge-row">
+        <span class="badge">Last Updated: October 17, 2026</span>
+        <span class="badge">AI-Generated Content Disclaimer</span>
+        <span class="badge">Educational &amp; Entertainment Use</span>
+        <span class="badge">Google Play Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#acceptance">Acceptance</a>
+            <a href="#purpose">Educational Purpose</a>
+            <a href="#ai-terms">AI-Generated Content</a>
+            <a href="#no-advice">No Professional Advice</a>
+            <a href="#license">License Grant</a>
+            <a href="#permitted">Permitted Use</a>
+            <a href="#prohibited">Prohibited Use</a>
+            <a href="#others">Other People's Data</a>
+            <a href="#camera-terms">Camera &amp; Palm Scans</a>
+            <a href="#ip">Intellectual Property</a>
+            <a href="#thirdparty-terms">Third-Party Services</a>
+            <a href="#termination">Termination</a>
+            <a href="#liability">Limitation of Liability</a>
+            <a href="#governing">Governing Law</a>
+            <a href="#contact-terms">Contact</a>
+        </div>
+    </div>
+
+    <div class="section" id="acceptance">
+        <div class="section-head">
+            <div class="section-icon">01</div>
+            <div><h2>Acceptance of Terms</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>These Terms of Use ("Terms") are a binding agreement between you ("User") and <strong>Jay Studio</strong> ("we," "us," "our") for your use of <strong>AI Astrology: Palm &amp; Tarot</strong> (the "App").</p>
+        <div class="callout callout-blue">
+            <strong>By downloading, installing, or using the App, you confirm that you:</strong><br>
+            (a) have read and understood these Terms;<br>
+            (b) understand that all readings are AI-generated and for educational and entertainment purposes only;<br>
+            (c) agree to be bound by these Terms and our Privacy Policy.<br><br>
+            If you do not agree, please uninstall the App.
+        </div>
+    </div>
+
+    <div class="section" id="purpose">
+        <div class="section-head">
+            <div class="section-icon">02</div>
+            <div><h2>Educational &amp; Entertainment Purpose</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>The App presents Vedic astrology (Jyotish), palmistry (Hast Rekha), tarot, numerology, KP astrology, Panchang and Vastu as <strong>cultural and traditional knowledge, for educational and entertainment purposes only</strong>.</p>
+        <p>These practices are belief systems. They are <strong>not scientifically proven</strong>, and nothing in the App should be understood as a scientific, factual or guaranteed statement about your future, health, relationships, finances or character.</p>
+    </div>
+
+    <div class="section" id="ai-terms">
+        <div class="section-head">
+            <div class="section-icon">03</div>
+            <div><h2>AI-Generated Content Disclaimer</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <div class="highlight-box">
+            <h3>All readings in this App are generated by AI</h3>
+            <p>AI astrologer answers, horoscopes, palm readings, tarot interpretations and remedy explanations are generated by artificial intelligence (Google Gemini API). They are <strong>not written, reviewed or approved by a human astrologer, palmist or tarot reader</strong>. AI can misread a palm photo, misinterpret a chart, contradict itself, or present uncertain predictions with false confidence.</p>
+        </div>
+        <h3>Conditions of Use</h3>
+        <ul>
+            <li><strong>For learning and entertainment only:</strong> treat every reading as a point of view to reflect on, not as truth or as instructions.</li>
+            <li><strong>Calculations are automated:</strong> birth charts, dashas, Panchang timings and Guna Milan scores are calculated by software. Results depend on the birth details you enter and may differ from other astrology sources.</li>
+            <li><strong>No guarantee:</strong> Jay Studio makes no promise that any prediction will come true or that any reading is accurate or complete.</li>
+            <li><strong>Your decisions are your own:</strong> you are solely responsible for any action you take, or do not take, based on content in the App.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="no-advice">
+        <div class="section-head">
+            <div class="section-icon">04</div>
+            <div><h2>No Professional Advice</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <div class="callout callout-red">
+            The App does <strong>not</strong> provide medical, mental-health, legal, financial, investment, career or marriage counselling advice.
+        </div>
+        <ul>
+            <li>Do not delay or replace medical treatment, therapy or legal help because of a reading.</li>
+            <li>Do not make investment, loan, property or business decisions based on the App.</li>
+            <li>Do not decide on a marriage, relationship or separation solely from Kundli Milan scores, dosha checks or AI readings.</li>
+            <li>Remedies (mantras, donations, fasting, gemstones) are traditional practices shared for information. Consult a qualified expert before spending money on any remedy, and never stop prescribed treatment.</li>
+            <li>If you are in crisis or at risk of harm, contact local emergency services or a qualified professional immediately.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="license">
+        <div class="section-head">
+            <div class="section-icon">05</div>
+            <div><h2>License Grant</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>Jay Studio grants you a <strong>limited, personal, non-exclusive, non-transferable, revocable license</strong> to install and use the App for your own non-commercial use on Android devices you own or control.</p>
+        <p>You may not sell, rent, sublicense or commercially exploit the App or its AI-generated content, for example by offering paid readings produced by the App, without written permission from Jay Studio.</p>
+    </div>
+
+    <div class="section" id="permitted">
+        <div class="section-head">
+            <div class="section-icon">06</div>
+            <div><h2>Permitted Use</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <div class="two-col">
+            <div class="col-box">
+                <h3>Astrology &amp; AI</h3>
+                <ul>
+                    <li>Create birth profiles and view your Kundli</li>
+                    <li>Chat with AI astrologers about your chart</li>
+                    <li>Read daily, weekly, monthly and yearly horoscopes</li>
+                    <li>Check Kundli Milan between two profiles</li>
+                </ul>
+            </div>
+            <div class="col-box">
+                <h3>Readings &amp; Tools</h3>
+                <ul>
+                    <li>Scan your palm for an AI palm reading</li>
+                    <li>Draw tarot cards and get AI interpretations</li>
+                    <li>Use Panchang, numerology, KP and Vastu tools</li>
+                    <li>Save readings and chats on your device</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="prohibited">
+        <div class="section-head">
+            <div class="section-icon">07</div>
+            <div><h2>Prohibited Use</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <div class="callout callout-red">Breaking any of these rules may lead to immediate termination of your license.</div>
+        <p>You agree <strong>not</strong> to:</p>
+        <ul>
+            <li>Present AI-generated readings from the App as the work of a human astrologer, or sell them as professional consultations</li>
+            <li>Use readings to threaten, harass, frighten, discriminate against or exploit anyone</li>
+            <li>Scan another person's palm or enter their birth details without their permission</li>
+            <li>Reverse engineer or decompile the App, or extract its API keys or configuration</li>
+            <li>Use bots, scripts or automated requests to overload or misuse the AI service</li>
+            <li>Use the App for any unlawful purpose, or remove copyright or proprietary notices</li>
+        </ul>
+    </div>
+
+    <div class="section" id="others">
+        <div class="section-head">
+            <div class="section-icon">08</div>
+            <div><h2>Other People's Information</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App lets you add profiles for family members or friends and scan another person's palm. When you do this, you confirm that you have their permission to enter their birth details or photograph their palm, and that the information you enter is accurate. You are responsible for how you share readings about other people.</p>
+    </div>
+
+    <div class="section" id="camera-terms">
+        <div class="section-head">
+            <div class="section-icon">09</div>
+            <div><h2>Camera &amp; Palm Scans</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>The palm scanner uses your camera only to photograph palms. Please photograph only hands, and only with the owner's consent. Confirmed palm photos are sent to Google Gemini to generate the reading, as described in our Privacy Policy. Palm readings depend on photo quality and are AI-generated; an unclear photo may produce an incomplete or incorrect reading.</p>
+    </div>
+
+    <div class="section" id="ip">
+        <div class="section-head">
+            <div class="section-icon">10</div>
+            <div><h2>Intellectual Property</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>All rights in the App, including its software, design, icons, illustrations, branding and original text, belong to <strong>Jay Studio</strong>. Open-source components (such as Jetpack Compose, CameraX and MediaPipe) remain under their own licenses. Traditional astrological knowledge, such as sign names, mantras and classical rules, is not owned by Jay Studio.</p>
+    </div>
+
+    <div class="section" id="thirdparty-terms">
+        <div class="section-head">
+            <div class="section-icon">11</div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p>AI features depend on the Google Gemini API, and app settings on Google Firebase. Jay Studio is not responsible for outages, rate limits, changes or content produced by these third-party services. AI features may be slow, limited or unavailable at times.</p>
+    </div>
+
+    <div class="section" id="termination">
+        <div class="section-head">
+            <div class="section-icon">12</div>
+            <div><h2>Termination</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>You may stop using the App at any time by uninstalling it. Jay Studio may change, suspend or discontinue the App or any feature, including AI features, at any time without prior notice.</p>
+    </div>
+
+    <div class="section" id="liability">
+        <div class="section-head">
+            <div class="section-icon">13</div>
+            <div><h2>Disclaimer of Warranties &amp; Limitation of Liability</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>THE APP AND ALL AI-GENERATED CONTENT ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING ACCURACY, RELIABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT.</p>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, JAY STUDIO SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL OR CONSEQUENTIAL LOSS, INCLUDING EMOTIONAL DISTRESS, FINANCIAL LOSS, RELATIONSHIP OR MARRIAGE DECISIONS, OR LOSS OF DATA, ARISING FROM YOUR USE OF, OR RELIANCE ON, THE APP OR ANY READING IT GENERATES.</p>
+    </div>
+
+    <div class="section" id="governing">
+        <div class="section-head">
+            <div class="section-icon">14</div>
+            <div><h2>Governing Law &amp; Jurisdiction</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>These Terms are governed by the laws of <strong>India</strong>. Any dispute arising under these Terms is subject to the exclusive jurisdiction of the courts in <strong>Gujarat, India</strong>.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon">15</div>
+            <div><h2>Changes to These Terms</h2><div class="section-num">Section 15</div></div>
+        </div>
+        <p>We may revise these Terms at any time. The updated version will be posted here with a new date. Continued use of the App after an update means you accept the revised Terms.</p>
+    </div>
+
+    <div class="section" id="contact-terms">
+        <div class="section-head">
+            <div class="section-icon">16</div>
+            <div><h2>Contact Us</h2><div class="section-num">Section 16</div></div>
+        </div>
+        <p>For questions about these Terms of Use:</p>
+        <ul>
+            <li><strong>Developer:</strong> Jay Studio</li>
+            <li><strong>Package Name:</strong> <code>com.jaystudio.ai.astrology</code></li>
+            <li><strong>Email:</strong> <a href="mailto:jaystudioapps@gmail.com">jaystudioapps@gmail.com</a></li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>AI Astrology: Palm &amp; Tarot</strong><br>
+    © 2026 Jay Studio · Gujarat, India<br>
+    <a href="mailto:jaystudioapps@gmail.com">jaystudioapps@gmail.com</a>
+</footer>
+
+</body>
+</html>

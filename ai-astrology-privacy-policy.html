@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — AI Astrology: Palm &amp; Tarot</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #141A4A;
+            --blue:   #2E4196;
+            --accent: #34499C;
+            --gold:   #C8962A;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1C1F3A;
+            --body:   #363B5C;
+            --muted:  #6B7194;
+            --border: #D3D6E8;
+            --surface:#F2F3FA;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(46,65,150,.09);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; color: var(--body); background: #EEF0FA; min-height: 100vh; }
+
+        .site-header {
+            background: radial-gradient(120% 140% at 20% 0%, #3A55B8 0%, #22307E 45%, #0F0C3A 100%);
+            color: #fff; padding: 56px 24px 52px; text-align: center; position: relative; overflow: hidden;
+        }
+        .site-header::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background-image: radial-gradient(rgba(255,255,255,.55) 1px, transparent 1.2px);
+            background-size: 46px 46px; opacity: .35;
+        }
+        .site-header::after {
+            content: ''; position: absolute; width: 520px; height: 520px; right: -160px; top: -200px; pointer-events: none;
+            border-radius: 50%; border: 1px solid rgba(233,221,190,.35); box-shadow: 0 0 0 60px rgba(233,221,190,.06);
+        }
+        .logo-mark {
+            width: 64px; height: 64px; margin: 0 auto 18px; border-radius: 50%; position: relative;
+            background: radial-gradient(circle at 40% 38%, #FFFBEA 0%, #FAD67A 45%, #D89A2E 100%);
+            box-shadow: 0 0 0 6px rgba(233,221,190,.25), 0 0 40px rgba(250,214,122,.55);
+        }
+        .site-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; letter-spacing: -.5px; margin-bottom: 6px; position: relative; }
+        .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .8; color: #F3D9A0; position: relative; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 18px; position: relative; }
+        .badge { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; }
+
+        .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+        .toc-strip { background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow); padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2; }
+        .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+        .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+        .toc-links a { font-size: .82rem; color: var(--accent); background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; text-decoration: none; }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
+        .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+            background: linear-gradient(135deg, #2E4196, #141A4A); color: #F3D9A0; font: 600 .85rem 'DM Sans', sans-serif; letter-spacing: .5px; }
+        h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code { font-family: 'SF Mono', 'Fira Code', Consolas, monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
+        .callout-blue  { background: #EEF1FB; border-left: 3px solid var(--accent); color: #23336F; }
+        .callout-green { background: #ECFDF5; border-left: 3px solid var(--green); color: #065F46; }
+        .callout-red   { background: #FFF1F2; border-left: 3px solid var(--red);   color: #9B1C1C; }
+        .callout-amber { background: #FFF8E8; border-left: 3px solid var(--gold);  color: #7A5212; }
+
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 520px; }
+        thead tr { background: var(--surface); }
+        th { text-align: left; padding: 11px 14px; font-weight: 600; color: var(--ink); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        .yes { color: var(--green); font-weight: 600; }
+        .no  { color: var(--red); font-weight: 600; }
+
+        .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+        .pill { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; font-size: .82rem; font-weight: 500; color: var(--ink); }
+        .pill-red   { background: #FEE2E2; border-color: #FCA5A5; color: #991B1B; }
+        .pill-blue  { background: #E3E8F8; border-color: #AEB9E6; color: #23336F; }
+        .pill-green { background: #D1FAE5; border-color: #6EE7B7; color: #065F46; }
+
+        .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
+        .footer a { color: #F3D9A0; }
+        .footer strong { color: #fff; }
+        @media (max-width: 600px) { .section { padding: 20px 18px; } .site-header { padding: 40px 20px 36px; } }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="logo-mark" aria-hidden="true"></div>
+    <h1>AI Astrology: Palm &amp; Tarot</h1>
+    <div class="doc-type">Privacy Policy</div>
+    <div class="badge-row">
+        <span class="badge">Last Updated: October 17, 2026</span>
+        <span class="badge">Effective: October 17, 2026</span>
+        <span class="badge">Google Gemini AI Powered</span>
+        <span class="badge">No Ads · No Analytics</span>
+        <span class="badge">Google Play Compliant</span>
+    </div>
+</header>
+
+<div class="page-wrap">
+
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#intro">Introduction</a>
+            <a href="#purpose">Educational Purpose</a>
+            <a href="#collect">Data We Collect</a>
+            <a href="#ai">AI-Generated Content</a>
+            <a href="#camera">Camera &amp; Palm Photos</a>
+            <a href="#local">On-Device Storage</a>
+            <a href="#location">Location &amp; Sensors</a>
+            <a href="#thirdparty">Third-Party Services</a>
+            <a href="#security">Security</a>
+            <a href="#rights">Your Rights</a>
+            <a href="#permissions">Permissions</a>
+            <a href="#children">Children</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="section" id="intro">
+        <div class="section-head">
+            <div class="section-icon">01</div>
+            <div><h2>Introduction</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>Welcome to <strong>AI Astrology: Palm &amp; Tarot</strong> (the "App"), developed and operated by <strong>Jay Studio</strong> ("we," "us," "our"). The App is an Android astrology companion offering an AI astrologer chat, Janam Kundli (birth chart), Kundli Milan (horoscope matching), daily to yearly horoscopes, camera palm reading, tarot card reading, Panchang, numerology, KP astrology tools, a Vastu compass and remedies.</p>
+        <p>This Privacy Policy explains what information the App handles, where it is processed, why Google AI technologies are used, and the choices you have. <strong>Please read it carefully before using the App.</strong></p>
+        <div class="callout callout-blue">
+            By downloading, installing, or using the App, you acknowledge that you have read and agree to this Privacy Policy. If you do not agree, please uninstall and stop using the App.
+        </div>
+    </div>
+
+    <div class="section" id="purpose">
+        <div class="section-head">
+            <div class="section-icon">02</div>
+            <div><h2>Educational &amp; Entertainment Purpose</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <div class="callout callout-amber">
+            <strong>Important:</strong> This App is provided for <strong>educational, cultural and entertainment purposes only</strong>. Astrology, palmistry, tarot, numerology and Vastu are traditional belief systems; they are not scientifically proven and the App does not claim they are.
+        </div>
+        <p>All predictions, horoscopes, palm readings, tarot interpretations, remedies and chat answers in the App are <strong>generated by artificial intelligence</strong> (Google Gemini) or by automated calculation. They are not written or checked by a human astrologer, and they are not professional advice of any kind.</p>
+        <p>Do not use the App as a substitute for medical, legal, financial, psychological, marital or other professional advice. Always consult a qualified professional for important decisions.</p>
+    </div>
+
+    <div class="section" id="collect">
+        <div class="section-head">
+            <div class="section-icon">03</div>
+            <div><h2>Information We Collect</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <p>The App has no sign-in and no user accounts. Jay Studio does not run its own servers for your data. Information is handled in three ways: data you enter, data processed when you use a feature, and limited technical data used by Google services (Section 08).</p>
+
+        <h3>3.1 Data You Provide</h3>
+        <ul>
+            <li><strong>Birth profiles:</strong> name, gender, date, time and place of birth (with latitude, longitude and time zone) for you and anyone you add, such as family members</li>
+            <li><strong>Life context answers</strong> you choose to share in chat, such as occupation, income range or relationship status</li>
+            <li><strong>Questions</strong> you type to the AI astrologers and the questions you ask for tarot readings</li>
+            <li><strong>Palm photos</strong> taken with the camera or picked from your gallery</li>
+            <li><strong>Preferences</strong> such as your preferred language for AI answers</li>
+        </ul>
+
+        <h3>3.2 Data Processed When You Use a Feature</h3>
+        <ul>
+            <li><strong>AI requests:</strong> your question, the relevant birth-chart details and, for palm reading, your palm photos are sent to the Google Gemini API to generate an answer (Section 04)</li>
+            <li><strong>Camera frames:</strong> analysed on your device to detect and align your hand; nothing leaves the device until you confirm a capture (Section 05)</li>
+            <li><strong>Compass sensor:</strong> read on your device for the Vastu compass only (Section 07)</li>
+            <li><strong>App configuration:</strong> the App downloads its settings from Google Firebase Remote Config, which uses an anonymous app-installation identifier (Section 08)</li>
+        </ul>
+
+        <h3>3.3 Data We Do Not Collect</h3>
+        <div class="callout callout-green">
+            <strong>Jay Studio does not collect or ask for:</strong> your email address, phone number, contacts, payment or bank details, advertising ID, precise GPS location, or any photos other than the palm photos you choose to scan. The App shows <strong>no advertisements</strong> and contains <strong>no analytics or tracking SDKs</strong>.
+        </div>
+    </div>
+
+    <div class="section" id="ai">
+        <div class="section-head">
+            <div class="section-icon">04</div>
+            <div><h2>AI-Generated Content &amp; Accuracy</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <p>The App uses <strong>Google Gemini AI</strong> to write chat answers, horoscope explanations, palm readings and tarot interpretations. Birth charts, dashas, Panchang and matching scores are calculated on your device by the App's own astronomical engine; their meaning is then explained by AI.</p>
+        <div class="callout callout-amber">
+            <strong>Every reading in this App is generated by AI.</strong> AI can make mistakes, misread a palm photo, misinterpret a chart, or state something with more confidence than it deserves.
+        </div>
+        <h3>How AI Requests Work</h3>
+        <ul>
+            <li>When you ask a question, request a palm reading or interpret a tarot spread, the request is sent over encrypted HTTPS to the Google Gemini API.</li>
+            <li>The request contains your question, the birth-chart details needed to answer it (including the profile's name and birth data), your life context answers and, for palm reading, your palm photos.</li>
+            <li>The answer is returned to your device and saved there. Jay Studio does not receive or store a copy.</li>
+            <li>Google processes these requests under its own terms and privacy policy (Section 08).</li>
+        </ul>
+        <h3>What This Means for You</h3>
+        <div class="pill-list">
+            <span class="pill pill-red">AI readings can be wrong</span>
+            <span class="pill pill-red">Predictions are not guaranteed</span>
+            <span class="pill pill-blue">For education &amp; entertainment only</span>
+            <span class="pill pill-green">Consult professionals for real decisions</span>
+        </div>
+    </div>
+
+    <div class="section" id="camera">
+        <div class="section-head">
+            <div class="section-icon">05</div>
+            <div><h2>Camera &amp; Palm Photos</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>The App requests the <code>CAMERA</code> permission only for palm scanning. While the camera is open, hand detection runs <strong>entirely on your device</strong> using Google MediaPipe; the live preview is never uploaded.</p>
+        <div class="callout callout-green">
+            <strong>How palm photos are handled:</strong><br>
+            Only the photos you confirm with "Use photo" are sent to Google Gemini to create your reading.<br>
+            A copy of each confirmed palm photo is kept <strong>on your device</strong> so later scans can be checked against it, to tell whether a new scan is the same person's hand.<br>
+            Palm photos are never published, sold or stored on Jay Studio servers.
+        </div>
+        <p>Camera access is optional. You can pick a palm photo from your gallery instead; the Android photo picker gives the App access only to the photo you select. All other features work without the camera.</p>
+    </div>
+
+    <div class="section" id="local">
+        <div class="section-head">
+            <div class="section-icon">06</div>
+            <div><h2>On-Device Storage</h2><div class="section-num">Section 06</div></div>
+        </div>
+        <p>To keep your readings available, the App saves the following in its private storage on your device, separately for each profile:</p>
+        <ul>
+            <li><strong>Birth profiles</strong> and your life context answers</li>
+            <li><strong>AI chat history</strong> with each astrologer</li>
+            <li><strong>Palm reports</strong> and the palm photos used for them</li>
+            <li><strong>Tarot readings</strong> and their AI interpretations</li>
+            <li><strong>Settings</strong>, such as language</li>
+        </ul>
+        <p>This data stays inside the App's Android sandbox. Deleting a profile deletes its chats, palm data and tarot history. Uninstalling the App or clearing its storage deletes everything.</p>
+    </div>
+
+    <div class="section" id="location">
+        <div class="section-head">
+            <div class="section-icon">07</div>
+            <div><h2>Birth Place, Location &amp; Sensors</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <ul>
+            <li><strong>Birth place search:</strong> when you search for a city, the name you type is looked up with your device's built-in place search (Android Geocoder), which may use Google services. The App does not request or track your current location.</li>
+            <li><strong>Compass:</strong> the Vastu compass reads your phone's motion sensors on the device only. Sensor data is never saved or sent anywhere.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="thirdparty">
+        <div class="section-head">
+            <div class="section-icon">08</div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <p>The App relies on the following Google services and libraries. Each handles data under its own privacy terms.</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data Sent?</th><th>Privacy</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Gemini API</strong></td><td>Google LLC</td><td>AI chat, horoscope explanations, palm and tarot readings</td><td><span class="yes">Yes — questions, chart details, palm photos</span></td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td></tr>
+                    <tr><td><strong>Firebase Remote Config</strong></td><td>Google LLC</td><td>Downloading app settings</td><td><span class="yes">Yes — anonymous installation ID</span></td><td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a></td></tr>
+                    <tr><td><strong>MediaPipe Hand Landmarker</strong></td><td>Google LLC</td><td>Detecting your hand in the camera (model downloaded once)</td><td><span class="no">No — runs on device</span></td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td></tr>
+                    <tr><td><strong>CameraX</strong></td><td>Google / Android</td><td>Camera preview and capture</td><td><span class="no">No — on device</span></td><td>—</td></tr>
+                    <tr><td><strong>Android Geocoder</strong></td><td>Android / Google</td><td>Finding the birth city you type</td><td><span class="yes">Yes — the city name only</span></td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section" id="security">
+        <div class="section-head">
+            <div class="section-icon">09</div>
+            <div><h2>Data Security</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <ul>
+            <li>All network requests to Google services use encrypted HTTPS (TLS).</li>
+            <li>On-device data is protected by Android's app sandbox and cannot be read by other apps.</li>
+            <li>Jay Studio does not operate user accounts, cloud databases of personal data, or public reading archives.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="rights">
+        <div class="section-head">
+            <div class="section-icon">10</div>
+            <div><h2>Your Controls &amp; Rights</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Action</th><th>How</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Delete a profile and its data</strong></td><td>Tap your profile avatar in the top bar → Delete</td></tr>
+                    <tr><td><strong>Clear a chat</strong></td><td>Open the chat → Clear</td></tr>
+                    <tr><td><strong>Revoke camera access</strong></td><td>Device Settings → Apps → AI Astrology → Permissions → Camera → Don't allow</td></tr>
+                    <tr><td><strong>Delete all app data</strong></td><td>Device Settings → Apps → AI Astrology → Storage → Clear storage, or uninstall the App</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Because your data is stored on your device and not on our servers, we cannot view, export or delete it for you; the controls above put that in your hands. For questions about data sent to Google, see Google's privacy policy.</p>
+    </div>
+
+    <div class="section" id="permissions">
+        <div class="section-head">
+            <div class="section-icon">11</div>
+            <div><h2>Permissions</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Permission</th><th>Purpose</th><th>Optional?</th><th>Leaves Device?</th></tr></thead>
+                <tbody>
+                    <tr><td><code>CAMERA</code></td><td>Scanning your palm</td><td>Yes — you can pick a photo instead</td><td><span class="yes">Only confirmed palm photos, sent to Gemini</span></td></tr>
+                    <tr><td><code>INTERNET</code></td><td>Gemini AI answers, app settings, one-time hand-model download</td><td>Required for AI features</td><td><span class="yes">Encrypted over HTTPS</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section" id="children">
+        <div class="section-head">
+            <div class="section-icon">12</div>
+            <div><h2>Children's Privacy</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <p>The App is not directed at children under 13, and we do not knowingly collect personal information from them. Parents or guardians with questions may contact us using the details below.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon">13</div>
+            <div><h2>Policy Updates</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>We may update this Privacy Policy when features change or to follow Google Play policies. The updated version will be posted here with a new "Last Updated" date. Continued use of the App after an update means you accept the revised policy.</p>
+    </div>
+
+    <div class="section" id="contact">
+        <div class="section-head">
+            <div class="section-icon">14</div>
+            <div><h2>Contact Developer</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>For questions, suggestions or privacy requests about AI Astrology: Palm &amp; Tarot:</p>
+        <ul>
+            <li><strong>Developer / Studio:</strong> Jay Studio</li>
+            <li><strong>Package Name:</strong> <code>com.jaystudio.ai.astrology</code></li>
+            <li><strong>Support Email:</strong> <a href="mailto:jaystudioapps@gmail.com">jaystudioapps@gmail.com</a></li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+        <div class="callout callout-blue">We aim to respond to all privacy enquiries within <strong>30 business days</strong>.</div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>AI Astrology: Palm &amp; Tarot</strong><br>
+    © 2026 Jay Studio · Gujarat, India<br>
+    <a href="mailto:jaystudioapps@gmail.com">jaystudioapps@gmail.com</a>
+</footer>
+
+</body>
+</html>

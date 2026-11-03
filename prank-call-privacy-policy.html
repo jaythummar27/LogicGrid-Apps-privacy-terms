@@ -376,7 +376,7 @@
 
         <h3 style="color:var(--accent);margin:18px 0 8px;font-size:1rem;">3.3 Information not needed for World Chat</h3>
         <div class="callout callout-green">
-            World Chat does not require your telephone number, contacts, or financial credentials. Google sign-in provides your verified Gmail address and stable Google account identifier so we can restore the correct account after reinstall. Your Gmail address is not displayed to other World Chat users.
+            World Chat does not require your telephone number, contacts, or financial credentials. You enter a Gmail address and username when creating a profile. We do not verify that Gmail address at this time, so it cannot be used on its own to recover an account after reinstall. Your Gmail address is not displayed to other World Chat users.
         </div>
     </div>
 
@@ -385,8 +385,8 @@
             <div class="section-icon icon-purple">🌍</div>
             <div><h2>World Chat &amp; Accounts</h2></div>
         </div>
-        <p>World Chat stores the username and avatar you choose, country or location details you provide, optional profile details such as age and gender, your account identifier, sign-in email when you use Google sign-in, session credentials, and your room or direct messages. We use this data to identify your account, show your profile to other users, deliver messages, count members, and show recent online presence. Other users can see your public profile and messages you share with them or in rooms; they cannot see your sign-in email.</p>
-        <p>Our World Chat backend runs on Cloudflare. Google verifies your Google account when you sign in. The app sends a Google ID token to our backend for verification; we do not ask for your Google password. We also process your IP address for rate limiting and service security. Temporary image uploads are deleted after about 30 minutes; room messages after about 3 days; direct messages after about 7 days. Account and profile data remain until you request deletion.</p>
+        <p>World Chat stores the Gmail address and username you enter, your chosen avatar, country or location details you provide, optional profile details such as age and gender, your account identifier, session credentials, and your room or direct messages. We use this data to operate your profile, deliver messages, count members, and show recent online presence. Other users can see your public profile and messages you share with them or in rooms; they cannot see your Gmail address. Previously linked accounts may also have a Google account identifier and verified email stored from the earlier sign-in system.</p>
+        <p>Our World Chat backend runs on Cloudflare. The Gmail address you enter is not verified and does not grant access to an existing account. We also process your IP address for rate limiting and service security. Temporary image uploads are deleted after about 30 minutes; room messages after about 3 days; direct messages after about 7 days. Account and profile data remain until you request deletion.</p>
         <p>To delete your account in the app, open Settings → Account → Delete account. This removes your World Chat profile, sessions, messages, connections, group memberships, and reports associated with the account. If you have uninstalled the app, use our <a href="prank-call-delete-account.html">account deletion request page</a>. Uninstalling by itself does not notify us and does not delete server data.</p>
     </div>
 
@@ -612,7 +612,7 @@
                         <td>Until cleared or App uninstalled</td>
                     </tr>
                     <tr>
-                        <td>World Chat account, Google sign-in email, profile and sessions</td>
+                        <td>World Chat account, entered Gmail address, profile and sessions</td>
                         <td>Cloudflare backend and local app preferences</td>
                         <td><span class="tick">✔ Encrypted network connection</span></td>
                         <td>Until account deletion is requested</td>
@@ -634,7 +634,7 @@
         </div>
         <ul>
             <li>Local app data uses Android's private app storage. World Chat data is sent to the Cloudflare backend over HTTPS.</li>
-            <li>World Chat, Google sign-in, ad and billing network traffic uses HTTPS/TLS encryption in transit.</li>
+            <li>World Chat, ad and billing network traffic uses HTTPS/TLS encryption in transit.</li>
         </ul>
     </div>
 
